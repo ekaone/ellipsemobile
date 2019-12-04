@@ -62,7 +62,7 @@ function TaskDetails(props) {
               }
             />
           </ListItem>
-          <Divider variant="inset" component="li" />
+          {/* <Divider variant="inset" component="li" /> */}
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <AssignmentTurnedInIcon color="primary" style={{ fontSize: '45px' }}/>
@@ -84,7 +84,7 @@ function TaskDetails(props) {
               }
             />
           </ListItem>
-          <Divider variant="inset" component="li" />
+          {/* <Divider variant="inset" component="li" /> */}
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <EmojiTransportationIcon color="primary" style={{ fontSize: '45px' }} />
@@ -106,15 +106,15 @@ function TaskDetails(props) {
               }
             />
           </ListItem>
-          <Divider variant="inset" component="li" />
-          <Typography component="span" variant="subtitle2" color="textPrimary">
-            Start Date <b>01/15/2022</b>
-          </Typography>
-          <Divider orientation="vertical" variant="middle" component="span" />
-          <Typography component="span" variant="subtitle2" color="textPrimary">
-            Task Duration <b>0.00</b>
-          </Typography>
         </List>
+        <Divider variant="fullWidth" />
+        <Typography component="span" variant="subtitle2" color="textPrimary">
+          Start Date <b>01/15/2022</b>
+        </Typography>
+        <Divider orientation="vertical" variant="middle" component="span" />
+        <Typography component="span" variant="subtitle2" color="textPrimary">
+          Task Duration <b>0.00</b>
+        </Typography>
       </Paper>
     </>
   )
