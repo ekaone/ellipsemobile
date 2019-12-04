@@ -5,7 +5,7 @@ export const Items = [
     workOrderAction: 'INSPECTION EX',
     taskNumber: '002',
     taskAction: 'INSPECTION', 
-    equipmentNumber: '002',
+    equipmentNumber: 'EX002-001',
     equipmentAction: 'EXCAVATOR KOMATSU', 
     date: '12/31/2022',
     icon: 'workorder' 
@@ -16,7 +16,7 @@ export const Items = [
     workOrderAction: 'INSPECTION EX',
     taskNumber: '004',
     taskAction: 'INSPECTION', 
-    equipmentNumber: '002',
+    equipmentNumber: 'EX003-005',
     equipmentAction: 'DUMP TRUCK KOMATSU', 
     date: '12/31/2022',
     icon: 'workorder' 
@@ -27,7 +27,7 @@ export const Items = [
     workOrderAction: 'ACT5055 DAILY PM MECHANICAL',
     taskNumber: '001',
     taskAction: 'ACT5055 DAILY PM MECHANICAL', 
-    equipmentNumber: '002',
+    equipmentNumber: 'EX002-012',
     equipmentAction: 'ARTICULATED DUMP TRUCK', 
     date: '12/31/2022',
     icon: 'workorder' 

@@ -7,10 +7,8 @@ import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-
 
 // @material-ui/icons
 import WorkIcon from '@material-ui/icons/Work';
@@ -33,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function View() {
+export default function View(props) {
   const classes = useStyles();
 
   return (
@@ -55,9 +53,9 @@ export default function View() {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    000012
+                    {props.workOrderNumber}
                   </Typography>
-                  {" Task Action"}
+                  {" -- "} {props.workOrderAction }
                 </React.Fragment>
               }
             />
@@ -68,7 +66,7 @@ export default function View() {
               <AssignmentTurnedInIcon color="primary" style={{ fontSize: '45px' }}/>
             </ListItemAvatar>
             <ListItemText
-              primary="Summer BBQ"
+              primary="Task Number"
               secondary={
                 <React.Fragment>
                   <Typography
@@ -77,9 +75,9 @@ export default function View() {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    to Scott, Alex, Jennifer
+                    {props.taskNumber}
                   </Typography>
-                  {" — Wish I could come, but I'm out of town this…"}
+                  {" -- "} {props.taskAction}
                 </React.Fragment>
               }
             />
@@ -90,7 +88,7 @@ export default function View() {
               <EmojiTransportationIcon color="primary" style={{ fontSize: '45px' }} />
             </ListItemAvatar>
             <ListItemText
-              primary="Oui Oui"
+              primary="Equipment"
               secondary={
                 <React.Fragment>
                   <Typography
@@ -99,9 +97,9 @@ export default function View() {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    Sandra Adams
+                    {props.equipmentNumber}
                   </Typography>
-                  {' — Do you have Paris recommendations? Have you ever…'}
+                  {' -- '} {props.equipmentAction}
                 </React.Fragment>
               }
             />

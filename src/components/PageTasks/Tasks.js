@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // components unit
 import View from './View'
 import HeaderAppBar from './HeaderAppBar'
+import { Items } from './Data'
 
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +15,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   }
 }));
+
+const handleClick = (id) => {
+  console.log(id)
+}
 
 export default function Tasks() {
   const classes = useStyles();
@@ -23,12 +28,24 @@ export default function Tasks() {
       <HeaderAppBar />
       <div className={classes.root}>
         <Grid container spacing={1}>
-          <Grid item xs={12}>
-            <View />
-          </Grid>
-          <Grid item xs={12}>
-            <View />
-          </Grid>
+          {
+            Items.map(item => (
+              <Grid 
+                key={item.id} 
+                item xs={12}
+                onClick={() => handleClick(item.id)}
+              >
+                <View 
+                  workOrderNumber={item.workOrderNumber}
+                  workOrderAction={item.workOrderAction}
+                  taskNumber={item.workOrderAction}
+                  taskAction={item.taskAction}
+                  equipmentNumber={item.equipmentNumber}
+                  equipmentAction={item.equipmentAction}
+                />
+              </Grid>
+            ))
+          }
         </Grid>
       </div>
     </>
