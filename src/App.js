@@ -20,8 +20,8 @@ function App() {
       <Router>
         <Route exact path="/" component={PageLogin} />
         <Route path="/page-landing" component={PageLanding} />
-        <Route exact path="/page-tasks" component={PageTasks} />
-        <Route exact path="/page-forgotpassword" component={PageForgotPassword} />
+        <Route path="/page-tasks" component={PageTasks} />
+        <Route path="/page-forgotpassword" component={PageForgotPassword} />
       </Router>
     </>
   );

@@ -4,6 +4,7 @@ import {
   Redirect 
 } from 'react-router-dom'
 
+// @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -72,14 +73,14 @@ export default function PageLogin() {
           </Typography>
           <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
             <TextField
-             id="outlined-basic" 
+             id="username" 
              label="Username" 
              variant="outlined" 
              value={values.username}
              onChange={handleChange('username')}
             />
             <TextField 
-              id="outlined-basic" 
+              id="password" 
               label="Password" 
               variant="outlined" 
               value={values.password}
@@ -97,7 +98,18 @@ export default function PageLogin() {
             </Button>
           </form>
             <Typography align="center" variant="subtitle1" component="div">
-              <Link style={{ textDecoration: 'none'}} to="/page-forgotpassword">Forgot password</Link>
+              <Link 
+                style={{ textDecoration: 'none'}} 
+                // to="/page-forgotpassword/12"
+                to={{
+                  pathname: "/page-forgotpassword",
+                  state: {
+                      data: { id: 1, source: 'Page Login', component: 'PageLogin', time: new Date() }
+                  }
+              }}
+              >
+                Forgot password
+              </Link>
             </Typography>
         </Grid>
       </Grid>
