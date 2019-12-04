@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { 
   Link,
-  Redirect 
+  Redirect,
+  useHistory  
 } from 'react-router-dom'
 
 // @material-ui/core
@@ -31,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function PageLogin() {
   const classes = useStyles();
-
+  const history = useHistory();
   const [values, setValues] = useState({
     username: '',
     password: ''
@@ -46,7 +47,7 @@ export default function PageLogin() {
   const handleClick = () => {
     console.log(values.username)
     // if(values.username == 'admin' && values.password == 'admin') {
-      return <Redirect to='/page-landing' />
+      history.push("/page-forgotpassword")
     // } else {
     //   setWarning('Wrong')
     //   return

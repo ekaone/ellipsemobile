@@ -6,10 +6,10 @@ import {
 
 function ForgotPassword() {
 
-  const { id } = useParams()
-  const location = useLocation()
+  // const { id } = useParams()
+  // const location = useLocation()
 
-  console.log(location.state.data)
+  // console.log(location.state.data)
 
   return (
     <>
