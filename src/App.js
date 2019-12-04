@@ -2,13 +2,14 @@ import React from 'react';
 
 import { 
   PageLanding,
-  PageLogin 
+  PageLogin,
+  PageTasks 
 } from './components'
 
 function App() {
   return (
     <>
-      <PageLogin />
+      <PageTasks />
     </>
   );
 }

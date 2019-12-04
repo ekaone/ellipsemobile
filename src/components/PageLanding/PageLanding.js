@@ -3,6 +3,8 @@ import React from 'react'
 // @material-ui/core
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+
 
 // components unit
 import View from './View'
@@ -24,7 +26,13 @@ function PageLanding() {
   return (
     <>
       <div className={classes.root}>
-        Header
+        <Typography 
+          style={{ textAlign: 'center', paddingTop: '10px', paddingBottom: '10px' }} 
+          variant="h5" 
+          color="primary"
+        >
+          EMS SaaS Apps
+        </Typography>
         <Grid container spacing={1}>
           {
             Items.map(item => (
