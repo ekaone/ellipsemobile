@@ -47,7 +47,6 @@ export default function PageLogin() {
       <Grid 
         container 
         spacing={1}
-        container
         direction="row"
         justify="center"
         alignItems="center"
