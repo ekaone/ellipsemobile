@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { PageLanding } from './components'
+import { 
+  PageLanding,
+  PageLogin 
+} from './components'
 
 function App() {
   return (
     <>
-      <PageLanding />
+      <PageLogin />
     </>
   );
 }
