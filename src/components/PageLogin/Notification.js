@@ -13,19 +13,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function Notification(props) {
   const classes = useStyles();
-  // const [open, setOpen] = React.useState(false);
-
-  // const handleClick = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleClose = (event, reason) => {
-  //   if (reason === 'clickaway') {
-  //     return;
-  //   }
-
-  //   setOpen(false);
-  // };
 
   return (
     <div>
@@ -35,7 +22,7 @@ export default function Notification(props) {
           horizontal: 'center',
         }}
         open={props.open}
-        autoHideDuration={3000}
+        autoHideDuration={2000}
         onClose={props.handlerClose}
         ContentProps={{
           'aria-describedby': 'message-id',
