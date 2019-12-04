@@ -6,16 +6,17 @@ import {
 
 function ForgotPassword() {
 
-  // const { id } = useParams()
+  const { id } = useParams()
+  const obj = JSON.parse(id)
   // const location = useLocation()
 
-  // console.log(location.state.data)
+  console.log(obj.password)
 
   return (
     <>
       Forgot Password
       <br />
-      {/* {location} */}
+      { obj.username }
     </>
   )
 }

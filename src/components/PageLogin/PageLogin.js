@@ -45,13 +45,12 @@ export default function PageLogin() {
   }
 
   const handleClick = () => {
-    console.log(values.username)
-    // if(values.username == 'admin' && values.password == 'admin') {
-      history.push("/page-forgotpassword")
-    // } else {
-    //   setWarning('Wrong')
-    //   return
-    // }
+    if(values.username == 'admin' && values.password == 'admin') {
+      history.push("/page-forgotpassword/" + JSON.stringify(values))
+    } else {
+      setWarning('Wrong')
+      return
+    }
   }
 
   console.log(values)
