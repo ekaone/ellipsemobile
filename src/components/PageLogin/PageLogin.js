@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { 
+  Link,
+  Redirect 
+} from 'react-router-dom'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -32,12 +36,20 @@ export default function PageLogin() {
     password: ''
   })
 
+  const [warning, setWarning] = useState(null)
+
   const handleChange = (prop) => event => {
     setValues({ ...values, [prop]: event.target.value })
   }
 
   const handleClick = () => {
-    console.log(values)
+    console.log(values.username)
+    // if(values.username == 'admin' && values.password == 'admin') {
+      return <Redirect to='/page-landing' />
+    // } else {
+    //   setWarning('Wrong')
+    //   return
+    // }
   }
 
   console.log(values)
@@ -55,6 +67,9 @@ export default function PageLogin() {
           <Typography style={{ textAlign: 'center', paddingTop: '30px' }} variant="h4" color="primary">
             EMS Center
           </Typography>
+          <Typography style={{ textAlign: 'center', paddingTop: '50px' }} variant="h6" color="secondary">
+            {warning}
+          </Typography>
           <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
             <TextField
              id="outlined-basic" 
@@ -69,18 +84,20 @@ export default function PageLogin() {
               variant="outlined" 
               value={values.password}
               onChange={handleChange('password')}
+              type="password"
             />
             <Button 
               variant="contained" 
               color="primary" 
               component="div"
+              // onClick={handleClick}
               onClick={handleClick}
             >
               Login
             </Button>
           </form>
-            <Typography align="center" variant="h6" component="div">
-              Forgot password
+            <Typography align="center" variant="subtitle1" component="div">
+              <Link style={{ textDecoration: 'none'}} to="/page-forgotpassword">Forgot password</Link>
             </Typography>
         </Grid>
       </Grid>
