@@ -11,13 +11,19 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 // @material-ui/icons
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 // @components unit
 import HeaderAppBarInspect from './HeaderAppBarInspect'
-import { Items } from './Data'
+import { ItemsInspectComponents } from './Data'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,6 +39,9 @@ const useStyles = makeStyles(theme => ({
   },
   iconSave: {
     padding: theme.spacing(1, 2)
+  },
+  txtFieldDefect: {
+    width: '100%'
   }
 }));
 
@@ -43,13 +52,15 @@ function Inspect() {
   const { id } = useParams()
   const obj = JSON.parse(id)
 
-  const data = Items.find(itm => itm.id === obj) 
+  const ics = ItemsInspectComponents.filter(ic => ic.itemsId === obj)
 
-  return (
-    <>
-      {/* {obj} */}
-      <HeaderAppBarInspect />
-      <Paper className={classes.paper}>
+  console.log("C: ", ics)
+
+  const View = (props) => {
+    return (
+      <>
+      <br />
+      <Paper>
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
@@ -65,15 +76,75 @@ function Inspect() {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    {data.equipmentNumber}
+                    {props.equipmentNumber}
                   </Typography>
-                  {' -- '} {data.equipmentAction}
+                  {' -- '} {props.equipmentAction}
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+          <ListItem alignItems="flex-start">
+            <ListItemText
+              primary="Component"
+              secondary={
+                <React.Fragment>
+                  <Typography
+                    component="span"
+                    variant="body2"
+                    className={classes.inline}
+                    color="textPrimary"
+                  >
+                    <b>{props.component}</b>
+                  </Typography>
                 </React.Fragment>
               }
             />
           </ListItem>
         </List>
-      </Paper>
+        </Paper>
+        <ExpansionPanel>
+          <ExpansionPanelSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>DEFECTS for <b>{props.defect}</b></Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <TextField 
+              className={classes.txtFieldDefect} 
+              margin="dense" 
+              id="outlined-basic" 
+              label={props.txtLabelDefect} 
+              variant="outlined" 
+            />
+            
+          </ExpansionPanelDetails>
+          <ExpansionPanelDetails style={{ paddingTop: 0 }} >
+            <Button size="small" variant="contained" color="primary">
+                Create Defect
+              </Button>
+          </ExpansionPanelDetails>
+          </ExpansionPanel>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <HeaderAppBarInspect />
+      {  
+        ics.map(ic => (
+          <View
+            key={ic.id}
+            defect={ic.component}
+            txtLabelDefect={ic.component}
+            equipmentNumber={ic.equipmentNumber}
+            equipmentAction={ic.equipmentAction}
+            component={ic.component}
+          />
+        ))
+      }
     </>
   )
 }

@@ -56,7 +56,7 @@ export default function PageLogin() {
   }
 
   const handleClick = () => {
-    if(values.username == '1' && values.password == '1') {
+    if(values.username == 'a' && values.password == 'a') {
       // history.push("/page-forgotpassword/" + JSON.stringify(values))
       history.push("/page-landing")
     } else {
