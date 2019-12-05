@@ -49,3 +49,4 @@ export const ItemsInspectComponents = [
   { id: 10, itemsId: 3, component: 'Lamp', equipmentNumber: 'EX002-012', equipmentAction: 'ARTICULATED DUMP TRUCK'},
   { id: 11, itemsId: 3, component: 'Glass', equipmentNumber: 'EX002-012', equipmentAction: 'ARTICULATED DUMP TRUCK'}
 ]
+

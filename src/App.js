@@ -13,7 +13,8 @@ import {
   PageTasks,
   PageForgotPassword,
   PageTasksDetails,
-  PageInspect 
+  PageInspect,
+  PageDefect 
 } from './components'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/page-landing" component={PageLanding} />
           <Route exact path="/page-tasks" component={PageTasks} />
           <Route path="/page-tasks/inspect/:id" component={PageInspect} /> 
+          <Route path="/page-tasks/defect/:id" component={PageDefect} /> 
           <Route path="/page-tasks/:id" component={PageTasksDetails} /> 
           <Route path="/page-forgotpassword/:id" component={PageForgotPassword} />
         </Switch>
