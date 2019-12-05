@@ -16,6 +16,7 @@ import Paper from '@material-ui/core/Paper';
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 
 // @components unit
+import HeaderAppBarInspect from './HeaderAppBarInspect'
 import { Items } from './Data'
 
 const useStyles = makeStyles(theme => ({
@@ -47,6 +48,7 @@ function Inspect() {
   return (
     <>
       {/* {obj} */}
+      <HeaderAppBarInspect />
       <Paper className={classes.paper}>
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
