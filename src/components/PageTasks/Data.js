@@ -50,3 +50,16 @@ export const ItemsInspectComponents = [
   { id: 11, itemsId: 3, component: 'Glass', equipmentNumber: 'EX002-012', equipmentAction: 'ARTICULATED DUMP TRUCK'}
 ]
 
+
+export const DefectAttribute = [
+  { id: 1, value: 'Blisters' },
+  { id: 2, value: 'Brittleness' },
+  { id: 3, value: 'Cracking' },
+  { id: 4, value: 'Delamination' },
+  { id: 5, value: 'Discolouration' },
+  { id: 6, value: 'Flash' },
+  { id: 7, value: 'Flow lines' },
+  { id: 8, value: 'Gate blush' },
+  { id: 9, value: 'Jetting' },
+  { id: 10, value: 'Knit lines' },
+]
