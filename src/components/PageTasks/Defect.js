@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom'
 
 // components unit
+import HeaderAppBarDefect from './HeaderAppBarDefect'
 import { ItemsInspectComponents } from './Data'
 
 function Defect() {
@@ -13,6 +14,7 @@ function Defect() {
 
   return (
     <>
+      <HeaderAppBarDefect />
       Defect {obj}
     </>
   )
