@@ -23,6 +23,7 @@ import SaveIcon from '@material-ui/icons/Save';
 
 // components unit
 import HeaderAppBarDetails from './HeaderAppBarDetails'
+import { Items } from './Data'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -48,6 +49,8 @@ function TaskDetails(props) {
   const obj = JSON.parse(id)
   console.log(obj)
 
+  const data = Items.find(itm => itm.id === obj)
+
   return (
     <>
       <HeaderAppBarDetails />
@@ -69,9 +72,9 @@ function TaskDetails(props) {
                     color="textPrimary"
                   >
                     {/* {props.workOrderNumber} */}
-                    {obj}
+                    {data.workOrderNumber}
                   </Typography>
-                  {" -- "} {props.workOrderAction }
+                  {" -- "} {data.workOrderAction }
                 </React.Fragment>
               }
             />
@@ -90,9 +93,9 @@ function TaskDetails(props) {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    {props.taskNumber}
+                    {data.taskNumber}
                   </Typography>
-                  {" -- "} {props.taskAction}
+                  {" -- "} {data.taskAction}
                 </React.Fragment>
               }
             />
@@ -111,9 +114,9 @@ function TaskDetails(props) {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    {props.equipmentNumber}
+                    {data.equipmentNumber}
                   </Typography>
-                  {' -- '} {props.equipmentAction}
+                  {' -- '} {data.equipmentAction}
                 </React.Fragment>
               }
             />
