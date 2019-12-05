@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  useHistory
+  useHistory,
+  useParams
 } from 'react-router-dom'
 
 // @material-ui/core
@@ -33,6 +34,8 @@ const useStyles = makeStyles(theme => ({
 export default function HeaderAppBarDetails() {
   const classes = useStyles();
   const history = useHistory()
+  const { id } = useParams()
+  const obj = JSON.parse(id)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -41,11 +44,17 @@ export default function HeaderAppBarDetails() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (item) => {
-    setAnchorEl(null);
+  const handleOpen = (item) => {
+    // setAnchorEl(null);
     console.log(item)
+    history.push("/page-tasks/inspect/" + obj)
+    // history.push("/page-tasks/inspect")
   };
   
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
+
   const goPageTasks = () => {
     history.push("/page-tasks")
   }
@@ -84,10 +93,10 @@ export default function HeaderAppBarDetails() {
             open={open}
             onClose={handleClose}
           >
-            <MenuItem onClick={() => handleClose('inspect')}>Inspect</MenuItem>
-            <MenuItem onClick={() => handleClose('labor')}>Labor</MenuItem>
-            <MenuItem onClick={() => handleClose('complete')}>Complete</MenuItem>
-            <MenuItem onClick={() => handleClose('apply')}>Apply</MenuItem>
+            <MenuItem onClick={() => handleOpen('inspect')}>Inspect</MenuItem>
+            <MenuItem onClick={() => handleOpen('labor')}>Labor</MenuItem>
+            <MenuItem onClick={() => handleOpen('complete')}>Complete</MenuItem>
+            <MenuItem onClick={() => handleOpen('apply')}>Apply</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>

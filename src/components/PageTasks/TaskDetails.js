@@ -43,11 +43,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-function TaskDetails(props) {
+function TaskDetails() {
   const classes = useStyles();
   const { id } = useParams()
   const obj = JSON.parse(id)
-  console.log(obj)
+  // console.log(obj)
 
   const data = Items.find(itm => itm.id === obj)
 

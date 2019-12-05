@@ -33,7 +33,6 @@ export default function HeaderAppBar() {
   const classes = useStyles();
   const history = useHistory()
   
-  const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   
   const handleMenu = event => {
@@ -59,7 +58,6 @@ export default function HeaderAppBar() {
           <Typography variant="h6" align="center" className={classes.title}>
             Tasks
           </Typography>
-          {auth && (
             <div>
               <IconButton
                 aria-label="account of current user"
@@ -89,7 +87,6 @@ export default function HeaderAppBar() {
                 <MenuItem onClick={handleClose}>Config</MenuItem>
               </Menu>
             </div>
-          )}
         </Toolbar>
       </AppBar>
     </div>
