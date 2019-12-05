@@ -30,6 +30,6 @@ export const Items = [
     equipmentNumber: 'EX002-012',
     equipmentAction: 'ARTICULATED DUMP TRUCK', 
     date: '12/31/2022',
-    icon: 'workorder' 
+    icon: 'workorder'
   },
 ]

@@ -1,10 +1,12 @@
 import React from 'react'
+import { 
+  useHistory  
+} from 'react-router-dom'
 
 // @material-ui/core
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
 
 // components unit
 import View from './View'
@@ -16,12 +18,22 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const handleClick = (item) => {
-  console.log(item)
-}
-
 function PageLanding() {
   const classes = useStyles();
+  const history = useHistory();
+
+  const handleClick = (id) => {
+    const item = Items.find(itm => itm.id === id)
+    const dt = {
+      id: item.id,
+      subheader: item.subheader,
+      avatar: item.avatar,
+      icon: item.icon
+    }
+    console.log(item)
+    history.push("/page-tasks/")
+  }
+
 
   return (
     <>

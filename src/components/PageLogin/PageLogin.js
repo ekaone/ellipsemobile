@@ -41,7 +41,6 @@ export default function PageLogin() {
     password: ''
   })
 
-  const [warning, setWarning] = useState(null)
   const [open, setOpen] = useState(false);
 
   const handleClose = (event, reason) => {
@@ -57,10 +56,10 @@ export default function PageLogin() {
   }
 
   const handleClick = () => {
-    if(values.username == 'admin' && values.password == 'admin') {
-      history.push("/page-forgotpassword/" + JSON.stringify(values))
+    if(values.username == '1' && values.password == '1') {
+      // history.push("/page-forgotpassword/" + JSON.stringify(values))
+      history.push("/page-landing")
     } else {
-      // setWarning('Wrong')
       setOpen(true)
       return
     }
@@ -82,9 +81,6 @@ export default function PageLogin() {
             <Typography style={{ textAlign: 'center', paddingTop: '30px' }} variant="h4" color="primary">
               EMS Center
             </Typography>
-            <Typography style={{ textAlign: 'center', paddingTop: '50px' }} variant="h6" color="secondary">
-              {warning}
-            </Typography>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
               <TextField
               id="username" 
@@ -105,7 +101,6 @@ export default function PageLogin() {
                 variant="contained" 
                 color="primary" 
                 component="div"
-                // onClick={handleClick}
                 onClick={handleClick}
               >
                 Login

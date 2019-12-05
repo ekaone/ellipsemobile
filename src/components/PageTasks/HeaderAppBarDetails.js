@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  useHistory
+} from 'react-router-dom'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,6 +32,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function HeaderAppBarDetails() {
   const classes = useStyles();
+  const history = useHistory()
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -42,12 +46,15 @@ export default function HeaderAppBarDetails() {
     console.log(item)
   };
   
+  const goPageTasks = () => {
+    history.push("/page-tasks")
+  }
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
+          <IconButton onClick={goPageTasks} edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
             <ArrowBackIosIcon />
           </IconButton>
           <Typography variant="h6" align="center" className={classes.title}>

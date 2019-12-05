@@ -1,4 +1,7 @@
 import React from 'react'
+import { 
+  useParams
+} from 'react-router-dom'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -38,8 +41,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
 function TaskDetails(props) {
   const classes = useStyles();
+  const { id } = useParams()
+  const obj = JSON.parse(id)
+  console.log(obj)
 
   return (
     <>
@@ -61,7 +68,8 @@ function TaskDetails(props) {
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    {props.workOrderNumber}
+                    {/* {props.workOrderNumber} */}
+                    {obj}
                   </Typography>
                   {" -- "} {props.workOrderAction }
                 </React.Fragment>

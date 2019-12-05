@@ -1,4 +1,7 @@
 import React from 'react';
+import { 
+  useHistory 
+} from 'react-router-dom'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,23 +31,29 @@ const useStyles = makeStyles(theme => ({
 
 export default function HeaderAppBar() {
   const classes = useStyles();
+  const history = useHistory()
+  
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-
+  
   const handleMenu = event => {
     setAnchorEl(event.currentTarget);
   };
-
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
+  
+  const goPageLanding = () => {
+    history.push("/page-landing")
+  }
+  const open = Boolean(anchorEl);
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton onClick={goPageLanding} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <HomeIcon />
           </IconButton>
           <Typography variant="h6" align="center" className={classes.title}>

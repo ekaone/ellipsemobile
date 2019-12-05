@@ -11,17 +11,21 @@ import {
   PageLanding,
   PageLogin,
   PageTasks,
-  PageForgotPassword 
+  PageForgotPassword,
+  PageTasksDetails 
 } from './components'
 
 function App() {
   return (
     <>
       <Router>
+        <Switch>
         <Route exact path="/" component={PageLogin} />
-        <Route path="/page-landing" component={PageLanding} />
-        <Route path="/page-tasks" component={PageTasks} />
+        <Route exact path="/page-landing" component={PageLanding} />
+        <Route exact path="/page-tasks" component={PageTasks} />
+        <Route path="/page-tasks/:id" component={PageTasksDetails} /> 
         <Route path="/page-forgotpassword/:id" component={PageForgotPassword} />
+        </Switch>
       </Router>
     </>
   );
