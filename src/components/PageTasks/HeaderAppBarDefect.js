@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeaderAppBarDefect() {
+export default function HeaderAppBarDefect(props) {
   const classes = useStyles();
   const history = useHistory()
   
@@ -42,7 +42,7 @@ export default function HeaderAppBarDefect() {
             <ArrowBackIosIcon />
           </IconButton>
           <Typography variant="h6" align="center" className={classes.title}>
-            Defect
+            Defect {props.number} - {props.component}
           </Typography>
         </Toolbar>
       </AppBar>

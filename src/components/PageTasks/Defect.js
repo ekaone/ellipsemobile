@@ -10,7 +10,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 // components unit
 import HeaderAppBarDefect from './HeaderAppBarDefect'
-import { DefectAttribute } from './Data'
+import { 
+  DefectAttribute,
+  ItemsInspectComponents 
+} from './Data'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -38,12 +41,16 @@ function Defect() {
     setDefect(event.target.value);
   };
 
-  console.log(defect)
+  const defCp = ItemsInspectComponents.find(dt => dt.id === obj)
+
+  console.log(defCp)
 
   return (
     <>
-      <HeaderAppBarDefect />
-      Defect {obj}
+      <HeaderAppBarDefect 
+        number={defCp.equipmentNumber}
+        component={defCp.component}
+      />
       <form style={{ justifyContent: 'center' }} className={classes.container} noValidate autoComplete="off">
         <div>
           <TextField
