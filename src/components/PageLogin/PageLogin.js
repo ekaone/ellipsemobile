@@ -4,6 +4,7 @@ import {
   Redirect,
   useHistory  
 } from 'react-router-dom'
+import { isMobile } from 'react-device-detect';
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,6 +15,14 @@ import Typography from '@material-ui/core/Typography';
 
 // components unit
 import Notification from './Notification'
+
+const deviceDectect = () => {
+  if(isMobile) {
+    return "Mobile"
+  } else {
+    return "Other"
+  }
+}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +51,7 @@ export default function PageLogin() {
   })
 
   const [open, setOpen] = useState(false);
+  const [device, setDevice] = useState(deviceDectect)
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -79,7 +89,10 @@ export default function PageLogin() {
         >
           <Grid item xs={12}>
             <Typography style={{ textAlign: 'center', paddingTop: '30px' }} variant="h4" color="primary">
-              EMS Center
+              EMS Center 
+            </Typography>
+            <Typography style={{ textAlign: 'center' }} variant="h6" color="secondary">
+              Open by {device}
             </Typography>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
               <TextField
