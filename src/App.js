@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import { 
+  SocketIO,
   PageLanding,
   PageLogin,
   PageTasks,
@@ -22,7 +23,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={PageLogin} />
+          <Route exact path="/" component={SocketIO} />
           <Route exact path="/page-landing" component={PageLanding} />
           <Route exact path="/page-tasks" component={PageTasks} />
           <Route path="/page-tasks/inspect/:id" component={PageInspect} /> 
