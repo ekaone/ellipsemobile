@@ -2,6 +2,7 @@ import React from 'react'
 import Store from 'store'
 
 Store.set('user', { name:'Lau' })
+// Store.remove('user')
 const getUser = () => {
   return Store.get('user')
 } 
@@ -9,7 +10,7 @@ const getUser = () => {
 function Users() {
   return (
     <>
-      {getUser().name}
+      {!getUser() ? 'Empty' : getUser().name}
     </>
   )
 }

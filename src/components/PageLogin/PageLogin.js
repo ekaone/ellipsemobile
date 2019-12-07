@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { 
   Link,
-  Redirect,
   useHistory  
 } from 'react-router-dom'
 import { isMobile } from 'react-device-detect';
-// import Store from 'store'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,13 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import Notification from './Notification'
 import UserList from './Users'
 
-
-// Store.set('user', { name:'Eka' })
-// const getUser = () => {
-//   return Store.get('user')
-// } 
-
-const deviceDectect = () => {
+const deviceDetect = () => {
   if(isMobile) {
     return "Mobile"
   } else {
@@ -50,8 +42,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// console.log(getUser().name)
-
 export default function PageLogin() {
   const classes = useStyles();
   const history = useHistory();
@@ -61,7 +51,7 @@ export default function PageLogin() {
   })
 
   const [open, setOpen] = useState(false);
-  const [device, setDevice] = useState(deviceDectect)
+  const [device, setDevice] = useState(deviceDetect)
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
