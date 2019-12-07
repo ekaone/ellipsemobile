@@ -5,6 +5,7 @@ import {
   useHistory  
 } from 'react-router-dom'
 import { isMobile } from 'react-device-detect';
+// import Store from 'store'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,6 +16,13 @@ import Typography from '@material-ui/core/Typography';
 
 // components unit
 import Notification from './Notification'
+import UserList from './Users'
+
+
+// Store.set('user', { name:'Eka' })
+// const getUser = () => {
+//   return Store.get('user')
+// } 
 
 const deviceDectect = () => {
   if(isMobile) {
@@ -41,6 +49,8 @@ const useStyles = makeStyles(theme => ({
     },
   }
 }));
+
+// console.log(getUser().name)
 
 export default function PageLogin() {
   const classes = useStyles();
@@ -92,7 +102,7 @@ export default function PageLogin() {
               EMS Center 
             </Typography>
             <Typography style={{ textAlign: 'center' }} variant="h6" color="secondary">
-              Open by {device}
+              Open by {device} <UserList />
             </Typography>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
               <TextField
