@@ -57,7 +57,7 @@ export default function HeaderAppBar() {
   return (
     <>
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color={'primary'}>
         <Toolbar>
           <IconButton onClick={goPageLanding} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <HomeIcon />
