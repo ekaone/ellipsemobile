@@ -32,7 +32,7 @@ export default function Tasks() {
     <>
       <HeaderAppBar />
         <div className={classes.root}>
-          <Grid container spacing={1}>
+          <Grid container style={{ padding: '7px' }}>
             {
               Items.map(item => (
                 <Grid 

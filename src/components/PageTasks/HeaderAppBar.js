@@ -39,8 +39,14 @@ export default function HeaderAppBar() {
     setAnchorEl(event.currentTarget);
   };
   
-  const handleClose = () => {
+  const handleClose = (go) => {
     setAnchorEl(null);
+    if(go === 'account') {
+      history.push('/page-tasks/account')
+    }
+    if(go === 'logout') {
+      history.push('/')
+    }
   };
   
   const goPageLanding = () => {
@@ -49,6 +55,7 @@ export default function HeaderAppBar() {
   const open = Boolean(anchorEl);
 
   return (
+    <>
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
@@ -83,12 +90,13 @@ export default function HeaderAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Setting</MenuItem>
-                <MenuItem onClick={handleClose}>Config</MenuItem>
+                <MenuItem onClick={() => handleClose('account')}>Account</MenuItem>
+                <MenuItem onClick={() => handleClose('logout')}>Logout</MenuItem>
               </Menu>
             </div>
         </Toolbar>
       </AppBar>
     </div>
+    </>
   );
 }

@@ -30,11 +30,11 @@ export default function View(props) {
             {props.avatar}
           </Avatar>
         }
-        action={
-          <IconButton aria-label="work">
-            <WorkIcon />
-          </IconButton>
-        }
+        // action={
+        //   <IconButton aria-label="work">
+        //     <WorkIcon />
+        //   </IconButton>
+        // }
         title={props.title}
         subheader={props.subheader}
       />

@@ -55,6 +55,7 @@ function TaskDetails() {
     <>
       <HeaderAppBarDetails />
       <p />
+      <div style={{ padding: '7px' }}>
       <Paper className={classes.paper}>
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
@@ -162,6 +163,7 @@ function TaskDetails() {
           <SaveIcon style={{ fontSize: 40 }} />
         </IconButton>
       </Paper>
+      </div>
     </>
   )
 }

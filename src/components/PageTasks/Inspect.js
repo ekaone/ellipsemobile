@@ -104,6 +104,7 @@ function Inspect() {
   return (
     <>
       <HeaderAppBarInspect />
+      <div style={{ padding: '7px' }}>
       {  
         ics.map(ic => (
           <View
@@ -117,6 +118,7 @@ function Inspect() {
           />
         ))
       }
+      </div>
     </>
   )
 }

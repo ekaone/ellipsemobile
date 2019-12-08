@@ -38,7 +38,7 @@ function PageLanding() {
         >
           EMS SaaS Apps
         </Typography>
-        <Grid container spacing={1}>
+        <Grid container style={{ padding: '7px' }} spacing={1}>
           {
             Items.map(item => (
               <Grid key={item.id} item xs={12}>
