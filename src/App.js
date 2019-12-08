@@ -30,7 +30,7 @@ import {
 function App() {
   return (
     <>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <Router>
         <Switch>
           <Route exact path="/" component={PageLogin} />

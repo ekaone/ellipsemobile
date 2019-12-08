@@ -1,4 +1,7 @@
 import React from 'react';
+
+import JohnDow from '../../assets/johnDow.jpg'
+
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
@@ -76,7 +79,7 @@ function Header(props) {
             </Grid>
             <Grid item>
               <IconButton color="inherit" className={classes.iconButtonAvatar}>
-                <Avatar src="/static/images/avatar/1.jpg" alt="My Avatar" />
+                <Avatar src={JohnDow} alt="My Avatar" />
               </IconButton>
             </Grid>
           </Grid>
