@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 // @material-ui/icons
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 
 const useStyles = makeStyles(theme => ({
@@ -26,12 +27,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeaderAppBarAccount() {
+export default function HeaderAppBarLabor() {
   const classes = useStyles();
   const history = useHistory()
   
   const goPreviousPage = () => {
     history.goBack()
+  }
+
+  const addWork = () => {
+    console.log('Add')
   }
 
   return (
@@ -42,8 +47,17 @@ export default function HeaderAppBarAccount() {
             <ArrowBackIosIcon />
           </IconButton>
           <Typography variant="h6" align="center" className={classes.title}>
-            Account
+            Labor
           </Typography>
+          <IconButton
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            color="inherit"
+            onClick={addWork}
+          >
+            <AddCircleOutlineIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
