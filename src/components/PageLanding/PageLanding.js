@@ -23,17 +23,10 @@ function PageLanding() {
   const history = useHistory();
 
   const handleClick = (id) => {
-    const item = Items.find(itm => itm.id === id)
-    const dt = {
-      id: item.id,
-      subheader: item.subheader,
-      avatar: item.avatar,
-      icon: item.icon
-    }
-    console.log(item)
-    history.push("/page-tasks/")
+    // const item = Items.find(itm => itm.id === id)
+    // console.log(item)
+    history.push(id)
   }
-
 
   return (
     <>
@@ -53,7 +46,7 @@ function PageLanding() {
                   avatar={item.avatar}
                   title={item.title}
                   subheader={item.subheader}
-                  handlerClick={() => handleClick(item.id)}
+                  handlerClick={() => handleClick(item.path)}
                 />
               </Grid>
             ))

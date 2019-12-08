@@ -16,13 +16,13 @@ import Typography from '@material-ui/core/Typography';
 import Notification from './Notification'
 import UserList from './Users'
 
-const deviceDetect = () => {
-  if(isMobile) {
-    return "Mobile"
-  } else {
-    return "Other"
-  }
-}
+// const deviceDetect = () => {
+//   if(isMobile) {
+//     return "Mobile"
+//   } else {
+//     return "Other"
+//   }
+// }
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,7 +51,7 @@ export default function PageLogin() {
   })
 
   const [open, setOpen] = useState(false);
-  const [device, setDevice] = useState(deviceDetect)
+  // const [device, setDevice] = useState(deviceDetect)
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -90,9 +90,6 @@ export default function PageLogin() {
           <Grid item xs={12}>
             <Typography style={{ textAlign: 'center', paddingTop: '30px' }} variant="h4" color="primary">
               EMS Center 
-            </Typography>
-            <Typography style={{ textAlign: 'center' }} variant="h6" color="secondary">
-              Open by {device} <UserList />
             </Typography>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
               <TextField
