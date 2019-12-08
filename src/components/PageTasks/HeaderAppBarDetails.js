@@ -45,10 +45,18 @@ export default function HeaderAppBarDetails() {
   };
 
   const handleOpen = (item) => {
-    // setAnchorEl(null);
-    console.log(item)
-    history.push("/page-tasks/inspect/" + obj)
-    // history.push("/page-tasks/inspect")
+    if(item === 'inspect') {
+      history.push("/page-tasks/inspect/" + obj)
+    }
+    if(item === 'labor') {
+      history.push("/page-tasks/labor")
+    }
+    if(item === 'complete') {
+      history.push("/page-tasks/complete")
+    }
+    if(item === 'apply') {
+      history.push("/page-tasks/apply")
+    }
   };
   
   const handleClose = () => {
