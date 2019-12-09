@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   paper: {
     padding: theme.spacing(2),
@@ -14,23 +14,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function LaborWorkedOverride() {
+export default function LaborWorkedOverride(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={1}>
+      <Grid container spacing={1} style={{ padding: '1px 10px' }}>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>
+            <b>Work Order</b>
+            <br />
+            {props.wo}
+          </Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>
+            <b>Task</b>
+            <br />
+            {props.taskNumber}
+          </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>
+            Form
+          </Paper>
         </Grid>
       </Grid>
     </div>

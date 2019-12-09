@@ -6,6 +6,8 @@ import {
 // components unit
 import HeaderAppBarLaborWorked from './HeaderAppBarLaborWorked'
 import LaborWorkedHome from './LaborWorkedHome'
+import LaborWorkedOverride from './LaborWorkedOverride'
+import LaborWorkedCost from './LaborWorkedCost'
 import { Items } from './Data'
 
 function LaborWorked() {
@@ -19,6 +21,20 @@ function LaborWorked() {
       wo={items.workOrderNumber}
       taskNumber={items.taskNumber}
       date={items.date} 
+    />
+  )
+
+  const itemOverride = (
+    <LaborWorkedOverride 
+      wo={items.workOrderNumber}
+      taskNumber={items.taskNumber}
+    />
+  )  
+
+  const itemCost = (
+    <LaborWorkedCost 
+      wo={items.workOrderNumber}
+      taskNumber={items.taskNumber}
     />
   )
 
@@ -55,8 +71,8 @@ function LaborWorked() {
     <HeaderAppBarLaborWorked
       addWork={addWork} 
       anchorEl={anchorEl}
-      handlerCloseOverride={() => handleCloseOverride('override')}
-      handlerCloseCost={() => handleCloseCost('cost')}
+      handlerCloseOverride={() => handleCloseOverride(itemOverride)}
+      handlerCloseCost={() => handleCloseCost(itemCost)}
       handlerCloseHome={() => handleCloseHome(itemHome)}
       handlerClose={handleClose}
       open={open}
