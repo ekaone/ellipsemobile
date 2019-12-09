@@ -7,12 +7,13 @@ import {
 import HeaderAppBarLaborWorked from './HeaderAppBarLaborWorked'
 
 function LaborWorked() {
-  // const { id } = useParams()
-  // const obj = JSON.parse(id)
+  const { id } = useParams()
+  const obj = JSON.parse(id)
 
   return (
     <>
     <HeaderAppBarLaborWorked />
+    {obj}
     <br />
       Labor Worked
     </>

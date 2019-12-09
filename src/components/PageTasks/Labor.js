@@ -73,12 +73,13 @@ const handleEmployee = (id) => {
 function Labor() {
   const classes = useStyles();
 
-  // const { id } = useParams()
-  // const obj = JSON.parse(id)
+  const { id } = useParams()
+  const obj = JSON.parse(id)
 
   return (
     <>
       <HeaderAppBarLabor />
+      {obj}
       <br />
       <div className={classes.root} style={{ padding: '7px' }}>
         {

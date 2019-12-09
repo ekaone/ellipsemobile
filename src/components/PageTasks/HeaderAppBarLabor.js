@@ -31,15 +31,15 @@ const useStyles = makeStyles(theme => ({
 export default function HeaderAppBarLabor() {
   const classes = useStyles();
   const history = useHistory()
-  // const { id } = useParams()
-  // const obj = JSON.parse(id)
+  const { id } = useParams()
+  const obj = JSON.parse(id)
   
   const goPreviousPage = () => {
     history.goBack()
   }
 
   const addWork = () => {
-    history.push("/page-tasks/labor/worked")
+    history.push("/page-tasks/labor/worked/" + obj)
   }
 
   return (

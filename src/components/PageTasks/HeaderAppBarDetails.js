@@ -49,7 +49,7 @@ export default function HeaderAppBarDetails() {
       history.push("/page-tasks/inspect/" + obj)
     }
     if(item === 'labor') {
-      history.push("/page-tasks/labor")
+      history.push("/page-tasks/labor/" + obj)
     }
     if(item === 'complete') {
       history.push("/page-tasks/complete")

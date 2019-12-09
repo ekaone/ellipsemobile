@@ -33,7 +33,7 @@ function Account() {
         <Paper className={classes.root}>
           <Avatar className={classes.bigAvatar} alt="John Dow" src={JohnDow} />
           <Typography component="p" variant="h6" style={{ textAlign: 'center', paddingLeft: '10px' }}>
-            John Dow
+            Heru Priyanto
           </Typography>
         </Paper>
       </div>

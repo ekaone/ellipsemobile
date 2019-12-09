@@ -34,13 +34,13 @@ function App() {
       <CssBaseline />
       <Router>
         <Switch>
-          <Route exact path="/" component={PageLanding} />
+          <Route exact path="/" component={PageLogin} />
           <Route exact path="/page-landing" component={PageLanding} />
           <Route exact path="/page-approval" component={PageApproval} />
           <Route exact path="/page-tasks" component={PageTasks} />
           <Route exact path="/page-manager" component={PageManager} />
-          <Route exact path="/page-tasks/labor/" component={PageLabor} />
-          <Route exact path="/page-tasks/labor/worked" component={PageLaborWorked} />
+          <Route exact path="/page-tasks/labor/:id" component={PageLabor} />
+          <Route exact path="/page-tasks/labor/worked/:id" component={PageLaborWorked} />
           <Route path="/page-tasks/account" component={PageAccount} />
           <Route path="/page-tasks/complete" component={PageComplete} />
           <Route path="/page-tasks/apply" component={PageApply} />
