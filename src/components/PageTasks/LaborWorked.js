@@ -44,6 +44,10 @@ function LaborWorked() {
     setPage(item)
   };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
+
   const open = Boolean(anchorEl);
 
   return (
@@ -54,6 +58,7 @@ function LaborWorked() {
       handlerCloseOverride={() => handleCloseOverride('override')}
       handlerCloseCost={() => handleCloseCost('cost')}
       handlerCloseHome={() => handleCloseHome(itemHome)}
+      handlerClose={handleClose}
       open={open}
     />
     {obj}
