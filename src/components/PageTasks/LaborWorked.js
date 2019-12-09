@@ -5,13 +5,22 @@ import {
 
 // components unit
 import HeaderAppBarLaborWorked from './HeaderAppBarLaborWorked'
+import LaborWorkedHome from './LaborWorkedHome'
+import { Items } from './Data'
 
 function LaborWorked() {
   const { id } = useParams()
   const obj = JSON.parse(id)
 
+  const items = Items.find(item => item.id === obj)
+
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [page, setPage] = useState('Home')
+  const [page, setPage] = useState(
+      <LaborWorkedHome 
+        wo={items.workOrderNumber}
+        taskNumber={items.taskNumber} 
+      />
+    )
 
   const addWork = event => {
     setAnchorEl(event.currentTarget);

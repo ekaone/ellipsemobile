@@ -15,8 +15,8 @@ import Menu from '@material-ui/core/Menu';
 
 // @material-ui/icons
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import AddAlarmIcon from '@material-ui/icons/AddAlarm';
+import ListIcon from '@material-ui/icons/List';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -70,7 +70,7 @@ export default function HeaderAppBarLaborWorked(props) {
             color="inherit"
             onClick={props.addWork}
           >
-            <AddAlarmIcon />
+            <ListIcon />
           </IconButton>
           <Menu
             id="menu-appbar"
