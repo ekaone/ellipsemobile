@@ -29,8 +29,8 @@ const useStyles = makeStyles({
 
 const LaborTable = (props) => (
   <>
-  <Paper className={props.classesPaper}>
-    <Table className={props.classes} size="small" aria-label="a dense table">
+  <Paper className={props.classesPaper} onClick={props.handlerEmployee}>
+    <Table className={props.classesTable} size="small" aria-label="a dense table">
       <TableHead>
         <TableRow>
           <TableCell style={{ borderBottom: 'none' }} align="center" colSpan={2}><b>Employee</b></TableCell>
@@ -64,6 +64,10 @@ const LaborTable = (props) => (
   </>
 )
 
+const handleEmployee = (id) => {
+  console.log(id)
+}
+
 function Labor() {
   const classes = useStyles();
 
@@ -75,14 +79,16 @@ function Labor() {
         {
           LaborEmployee.map(item => (
             <LaborTable
+              key={item.id}
               classesPaper={classes.paper} 
-              classes={classes.table}
+              classesTable={classes.table}
               laborId={item.laborId}
               laborName={item.laborName}
               date={item.date}
               hoursWorked={item.hoursWorked}
               laborClass={item.laborClass}
               earnClass={item.earnClass}
+              handlerEmployee={() => handleEmployee(item.id)}
             />
           ))
         }  
