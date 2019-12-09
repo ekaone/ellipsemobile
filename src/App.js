@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={PageLogin} />
           <Route exact path="/page-landing" component={PageLanding} />
