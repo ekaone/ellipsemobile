@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { 
   useParams,
 } from 'react-router-dom'
@@ -11,6 +11,7 @@ function LaborWorked() {
   const obj = JSON.parse(id)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [page, setPage] = useState('Home')
 
   const addWork = event => {
     setAnchorEl(event.currentTarget);
@@ -19,11 +20,19 @@ function LaborWorked() {
   const handleCloseOverride = (item) => {
     setAnchorEl(null);
     console.log(item)
+    setPage(item)
   };
 
   const handleCloseCost = (item) => {
     setAnchorEl(null);
     console.log(item)
+    setPage(item)
+  };
+
+  const handleCloseHome = (item) => {
+    setAnchorEl(null);
+    console.log(item)
+    setPage(item)
   };
 
   const open = Boolean(anchorEl);
@@ -35,11 +44,12 @@ function LaborWorked() {
       anchorEl={anchorEl}
       handlerCloseOverride={() => handleCloseOverride('override')}
       handlerCloseCost={() => handleCloseCost('cost')}
+      handlerCloseHome={() => handleCloseHome('Home')}
       open={open}
     />
     {obj}
     <br />
-      Labor Worked
+      {page}
     </>
   )
 }

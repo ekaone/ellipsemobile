@@ -90,6 +90,7 @@ export default function HeaderAppBarLaborWorked(props) {
           >
             {/* <MenuItem onClick={() => handleClose('override')}>Override</MenuItem>
             <MenuItem onClick={() => handleClose('cost')}>Cost</MenuItem> */}
+            <MenuItem onClick={props.handlerCloseHome}>Home</MenuItem>
             <MenuItem onClick={props.handlerCloseOverride}>Override</MenuItem>
             <MenuItem onClick={props.handlerCloseCost}>Cost</MenuItem>
           </Menu>
