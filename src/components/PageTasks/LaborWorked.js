@@ -77,7 +77,7 @@ function LaborWorked() {
       handlerClose={handleClose}
       open={open}
     />
-    {obj}
+    {/* {obj} */}
     <br />
       {page}
     </>

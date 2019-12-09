@@ -1,7 +1,11 @@
 import React from 'react';
+
+// @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,6 +16,12 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  form: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: 200,
+    }
+  }
 }));
 
 export default function LaborWorkedCost(props) {
@@ -36,7 +46,14 @@ export default function LaborWorkedCost(props) {
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            Cost form
+            <h2>Labour Cost for other Employee</h2>
+            <form className={classes.form} noValidate autoComplete="off">
+              <TextField id="outlined-basic" label="Employee" variant="outlined" />
+              <br />
+              <TextField id="outlined-basic" label="Employee" variant="outlined" />
+              <br />
+              <Button variant="contained" color="primary">Apply</Button>
+            </form>
           </Paper>
         </Grid>
       </Grid>

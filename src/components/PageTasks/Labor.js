@@ -79,7 +79,7 @@ function Labor() {
   return (
     <>
       <HeaderAppBarLabor />
-      {obj}
+      {/* {obj} */}
       <br />
       <div className={classes.root} style={{ padding: '7px' }}>
         {
