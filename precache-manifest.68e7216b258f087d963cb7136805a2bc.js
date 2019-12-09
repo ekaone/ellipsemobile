@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "38bdfcc454bb149067e72793ad7b1645",
+    "revision": "dd629fcde95797b611d4dbe3da22745a",
     "url": "/ellipsemobile/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ellipsemobile/static/js/2.c2d2e576.chunk.js"
   },
   {
-    "revision": "055a34ea0bcada93efaa",
-    "url": "/ellipsemobile/static/js/main.7f4a02b3.chunk.js"
+    "revision": "586100506fce71e6a92e",
+    "url": "/ellipsemobile/static/js/main.26fad1c1.chunk.js"
   },
   {
     "revision": "db6c0135daedb17e5f53",
