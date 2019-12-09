@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  useParams
+} from 'react-router-dom'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,7 +11,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-
 
 // components unit
 import HeaderAppBarLabor from './HeaderAppBarLabor'
@@ -70,6 +72,9 @@ const handleEmployee = (id) => {
 
 function Labor() {
   const classes = useStyles();
+
+  // const { id } = useParams()
+  // const obj = JSON.parse(id)
 
   return (
     <>

@@ -65,8 +65,8 @@ export const DefectAttribute = [
 ]
 
 export const LaborEmployee = [
-  { id: 1, laborName: 'Blisters', laborId: '000123', date: '12/12/2020', hoursWorked: '2.00', laborClass: 'MK', earnClass: '003' },
-  { id: 2, laborName: 'Brittleness', laborId: '023811', date: '08/01/2020', hoursWorked: '1.00', laborClass: 'LM', earnClass: '002' },
-  { id: 3, laborName: 'John', laborId: '07128637', date: '01/01/2020', hoursWorked: '5.00', laborClass: 'OP', earnClass: '123' },
-  { id: 4, laborName: 'Delamination', laborId: '000012', date: '01/02/2020', hoursWorked: '6.50', laborClass: 'FM', earnClass: '567' },
+  { id: 1, laborName: 'Heru Priyanto', laborId: '000123', date: '12/12/2020', hoursWorked: '2.00', laborClass: 'MK', earnClass: '003' },
+  { id: 2, laborName: 'Heru Priyanto', laborId: '000123', date: '08/01/2020', hoursWorked: '1.00', laborClass: 'MK', earnClass: '003' },
+  { id: 3, laborName: 'Heru Priyanto', laborId: '000123', date: '01/01/2020', hoursWorked: '5.00', laborClass: 'MK', earnClass: '003' },
+  { id: 4, laborName: 'Heru Priyanto', laborId: '000123', date: '01/02/2020', hoursWorked: '6.50', laborClass: 'MK', earnClass: '003' },
 ]

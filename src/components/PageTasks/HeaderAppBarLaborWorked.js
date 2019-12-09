@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeaderAppBarLabor() {
+export default function HeaderAppBarLaborWorked() {
   const classes = useStyles();
   const history = useHistory()
   // const { id } = useParams()
@@ -39,7 +39,7 @@ export default function HeaderAppBarLabor() {
   }
 
   const addWork = () => {
-    history.push("/page-tasks/labor/worked")
+    console.log('Add')
   }
 
   return (
@@ -50,7 +50,7 @@ export default function HeaderAppBarLabor() {
             <ArrowBackIosIcon />
           </IconButton>
           <Typography variant="h6" align="center" className={classes.title}>
-            Labor
+            Labor Worked
           </Typography>
           <IconButton
             aria-label="account of current user"
