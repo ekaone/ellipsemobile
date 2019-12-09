@@ -87,18 +87,19 @@ export default function PageLogin() {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs={12}>
+          <Grid item xs={12} lg={12}>
             <Typography style={{ textAlign: 'center', paddingTop: '30px' }} variant="h4" color="primary">
               EMS Center 
             </Typography>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
               <TextField
-              id="username" 
-              label="Username" 
-              variant="outlined" 
-              value={values.username}
-              onChange={handleChange('username')}
+                id="username" 
+                label="Username" 
+                variant="outlined" 
+                value={values.username}
+                onChange={handleChange('username')}
               />
+              <br />
               <TextField 
                 id="password" 
                 label="Password" 
@@ -107,6 +108,7 @@ export default function PageLogin() {
                 onChange={handleChange('password')}
                 type="password"
               />
+              <br />
               <Button 
                 variant="contained" 
                 color="primary" 
