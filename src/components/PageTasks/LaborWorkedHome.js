@@ -35,7 +35,9 @@ export default function LaborWorkedHome(props) {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>
+            Date {props.date}
+          </Paper>
         </Grid>
       </Grid>
     </div>

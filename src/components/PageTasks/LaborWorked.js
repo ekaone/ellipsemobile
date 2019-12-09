@@ -14,13 +14,16 @@ function LaborWorked() {
 
   const items = Items.find(item => item.id === obj)
 
+  const itemHome = (
+    <LaborWorkedHome 
+      wo={items.workOrderNumber}
+      taskNumber={items.taskNumber}
+      date={items.date} 
+    />
+  )
+
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [page, setPage] = useState(
-      <LaborWorkedHome 
-        wo={items.workOrderNumber}
-        taskNumber={items.taskNumber} 
-      />
-    )
+  const [page, setPage] = useState(itemHome)
 
   const addWork = event => {
     setAnchorEl(event.currentTarget);
@@ -28,19 +31,16 @@ function LaborWorked() {
 
   const handleCloseOverride = (item) => {
     setAnchorEl(null);
-    console.log(item)
     setPage(item)
   };
 
   const handleCloseCost = (item) => {
     setAnchorEl(null);
-    console.log(item)
     setPage(item)
   };
 
   const handleCloseHome = (item) => {
     setAnchorEl(null);
-    console.log(item)
     setPage(item)
   };
 
@@ -53,7 +53,7 @@ function LaborWorked() {
       anchorEl={anchorEl}
       handlerCloseOverride={() => handleCloseOverride('override')}
       handlerCloseCost={() => handleCloseCost('cost')}
-      handlerCloseHome={() => handleCloseHome('Home')}
+      handlerCloseHome={() => handleCloseHome(itemHome)}
       open={open}
     />
     {obj}

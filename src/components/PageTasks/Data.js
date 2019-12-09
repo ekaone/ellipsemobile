@@ -18,7 +18,7 @@ export const Items = [
     taskAction: 'INSPECTION', 
     equipmentNumber: 'EX003-005',
     equipmentAction: 'DUMP TRUCK KOMATSU', 
-    date: '12/31/2022',
+    date: '10/05/2022',
     icon: 'workorder' 
   },
   { 
@@ -29,7 +29,7 @@ export const Items = [
     taskAction: 'ACT5055 DAILY PM MECHANICAL', 
     equipmentNumber: 'EX002-012',
     equipmentAction: 'ARTICULATED DUMP TRUCK', 
-    date: '12/31/2022',
+    date: '02/17/2022',
     icon: 'workorder'
   },
 ]
