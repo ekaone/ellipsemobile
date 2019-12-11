@@ -53,6 +53,11 @@ export default function HeaderAppBar() {
   const goPageLanding = () => {
     history.push("/page-landing")
   }
+
+  const goCreateWo = () => {
+    history.push("/page-initiatework/createwo")
+  }
+
   const open = Boolean(anchorEl);
 
   return (
@@ -91,11 +96,10 @@ export default function HeaderAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem>Create WO</MenuItem>
-                <MenuItem>Status</MenuItem>
-                <Divider style={{ margin: '7px' }} />
+                <MenuItem onClick={goCreateWo}>Create WO</MenuItem>
+                {/* <Divider style={{ margin: '7px' }} />
                 <MenuItem>Setting</MenuItem>
-                <MenuItem>Refresh</MenuItem>
+                <MenuItem>Refresh</MenuItem> */}
               </Menu>
             </div>
         </Toolbar>

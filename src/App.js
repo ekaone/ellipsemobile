@@ -26,7 +26,8 @@ import {
   PageApply,
   PageManager,
   PageLaborWorked,
-  PageInitiateWork 
+  PageInitiateWork,
+  PageCreateWorkOrder 
 } from './components'
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/page-tasks" component={PageTasks} />
           <Route exact path="/page-manager" component={PageManager} />
           <Route exact path="/page-initiatework" component={PageInitiateWork} />
+          <Route exact path="/page-initiatework/createwo" component={PageCreateWorkOrder} />
           <Route exact path="/page-tasks/labor/:id" component={PageLabor} />
           <Route exact path="/page-tasks/labor/worked/:id" component={PageLaborWorked} />
           <Route path="/page-tasks/account" component={PageAccount} />
