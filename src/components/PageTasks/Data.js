@@ -70,3 +70,40 @@ export const LaborEmployee = [
   { id: 3, laborName: 'Heru Priyanto', laborId: '000123', date: '01/01/2020', hoursWorked: '5.00', laborClass: 'MK', earnClass: '003' },
   { id: 4, laborName: 'Heru Priyanto', laborId: '000123', date: '01/02/2020', hoursWorked: '6.50', laborClass: 'MK', earnClass: '003' },
 ]
+
+export const FailureMode = [
+  {id: 1, value: '00004 Parameter Deviation'},
+  {id: 2, value: '00005 Structural Fault'},
+  {id: 3, value: '00006 Appearance Deterioration'},
+  {id: 4, value: '00007 Potential Hazard'},
+  {id: 5, value: '00008 Partial Failure'},
+  {id: 6, value: '01 ABUSE'},
+  {id: 7, value: '02 ACCIDENT'},
+  {id: 8, value: '03 ARCED'},
+  {id: 9, value: '04 BENT'},
+  {id: 10, value: '05 BLOCKED'},
+  {id: 11, value: '06 BLOWN'},
+  {id: 12, value: '07 BROKEN'},
+  {id: 13, value: 'BURNT'},
+  {id: 14, value: 'CLOGGED'},
+  {id: 15, value: 'CRACKED'},
+  {id: 16, value: 'DIRTY'},
+  {id: 17, value: 'FLAT'},
+  {id: 18, value: 'LACK OF OIL'},
+  {id: 19, value: 'LEAKING'},
+  {id: 20, value: 'LOW POWER'},
+]
+
+export const FailureCondition = [
+  {id: 1, value: '00001 Mechanical Failure Mode'},
+  {id: 2, value: '00002 Electrical Failure Mode'},
+  {id: 3, value: '00003 Control/Login Failure Mode'},
+  {id: 4, value: '00004 Instrument Failure Mode'},
+  {id: 5, value: '00005 Operational Failure Mode'},
+  {id: 6, value: '01 FACTORY DEFFECTIVE'},
+  {id: 7, value: '02 MAINTENANCE ERROR'},
+  {id: 8, value: '03 OPERATION ERROR'},
+  {id: 9, value: '04 ENVIRONMENT INFLUENCE'},
+  {id: 10, value: '05 NORMAL DEFFECTIVE'},
+  {id: 11, value: '06 DOWN BY SERVICE PROG'},
+]

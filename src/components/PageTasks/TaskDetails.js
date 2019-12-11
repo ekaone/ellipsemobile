@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { 
   useParams
 } from 'react-router-dom'
@@ -13,17 +13,20 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // @material-ui/icons
 import WorkIcon from '@material-ui/icons/Work';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
-import SaveIcon from '@material-ui/icons/Save';
 
 // components unit
 import HeaderAppBarDetails from './HeaderAppBarDetails'
-import { Items } from './Data'
+import { 
+  Items,
+  DefectAttribute,
+  FailureMode 
+} from './Data'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,7 +42,15 @@ const useStyles = makeStyles(theme => ({
   },
   iconSave: {
     padding: theme.spacing(1, 2)
-  }
+  },
+  menu: {
+    width: 200,
+  },
+  textField: {
+    // marginLeft: theme.spacing(1),
+    // marginRight: theme.spacing(1),
+    width: 300,
+  },
 }));
 
 
@@ -50,6 +61,12 @@ function TaskDetails() {
   // console.log(obj)
 
   const data = Items.find(itm => itm.id === obj)
+
+  const [defect, setDefect] = useState('07 BROKEN');
+
+  const handleChange = event => {
+    setDefect(event.target.value);
+  };
 
   return (
     <>
@@ -159,9 +176,28 @@ function TaskDetails() {
         </Typography>
         <br />
         <TextField margin="dense" id="outlined-basic" label="Part Causing Failure" variant="outlined" />
-        <IconButton color="primary" className={classes.iconSave} color="primary" aria-label="save">
-          <SaveIcon style={{ fontSize: 40 }} />
-        </IconButton>
+        <br />
+        <TextField
+            id="outlined-select-fail-mode"
+            select
+            label="Failure Mode"
+            className={classes.textField}
+            value={defect}
+            onChange={handleChange}
+            SelectProps={{
+              MenuProps: {
+                className: classes.menu,
+              },
+            }}
+            margin="dense"
+            variant="outlined"
+          >
+            {FailureMode.map(option => (
+              <MenuItem key={option.id} value={option.value}>
+                {option.value}
+              </MenuItem>
+            ))}
+          </TextField>
       </Paper>
       </div>
     </>
