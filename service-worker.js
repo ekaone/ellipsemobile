@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ellipsemobile/precache-manifest.d1a1c70389dcc12ecbdc179feff8583e.js"
+  "/ellipsemobile/precache-manifest.d73460d68ec3ad0730dc563ed4f13f06.js"
 );
 
 self.addEventListener('message', (event) => {
