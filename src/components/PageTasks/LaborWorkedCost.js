@@ -18,9 +18,12 @@ const useStyles = makeStyles(theme => ({
   },
   form: {
     '& > *': {
-      margin: theme.spacing(1),
-      width: 200,
+      margin: theme.spacing(0),
+      width: '100%',
     }
+  },
+  textField: {
+    width: '100%'
   }
 }));
 
@@ -50,7 +53,9 @@ export default function LaborWorkedCost(props) {
             <form className={classes.form} noValidate autoComplete="off">
               <TextField id="outlined-basic" label="Employee" variant="outlined" />
               <br />
+              <br />
               <TextField id="outlined-basic" label="Employee" variant="outlined" />
+              <br />
               <br />
               <Button variant="contained" color="primary">Apply</Button>
             </form>

@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     // marginLeft: theme.spacing(1),
     // marginRight: theme.spacing(1),
-    width: 300,
+    width: '100%',
   },
 }));
 
@@ -181,7 +181,14 @@ function TaskDetails() {
           Administrator, System ADMIN
         </Typography>
         <br />
-        <TextField className={classes.textField} margin="dense" id="outlined-basic" label="Part Causing Failure" variant="outlined" />
+        <TextField 
+          className={classes.textField} 
+          // margin="dense" 
+          id="outlined-basic" 
+          label="Part Causing Failure" 
+          variant="outlined" 
+        />
+        <br />
         <br />
         <TextField
             id="outlined-select-fail-mode"
@@ -195,7 +202,7 @@ function TaskDetails() {
                 className: classes.menu,
               },
             }}
-            margin="dense"
+            // margin="dense"
             variant="outlined"
           >
             {FailureMode.map(option => (
@@ -204,6 +211,7 @@ function TaskDetails() {
               </MenuItem>
             ))}
           </TextField>
+          <br />
           <br />
           <TextField
             id="outlined-select-fail-mode"
@@ -217,7 +225,7 @@ function TaskDetails() {
                 className: classes.menu,
               },
             }}
-            margin="dense"
+            // margin="dense"
             variant="outlined"
           >
             {FailureCondition.map(option => (
@@ -228,7 +236,11 @@ function TaskDetails() {
           </TextField>
           <br />
           <br />
-          <Button variant="contained" color="primary">
+          <Button 
+            variant="contained" 
+            color="primary"
+            className={classes.textField}  
+          >
             Save
           </Button>
       </Paper>

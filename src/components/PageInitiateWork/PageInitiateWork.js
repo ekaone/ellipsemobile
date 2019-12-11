@@ -76,7 +76,7 @@ function PageInitiateWork() {
             <Grid item xs={12}>
               <TextField 
                 className={classes.textField} 
-                margin="dense" 
+                // margin="dense" 
                 value={value} 
                 id="outlined-basic" 
                 label="Equipment Reference" 
@@ -97,7 +97,7 @@ function PageInitiateWork() {
                   className: classes.menu,
                 },
               }}
-              margin="dense"
+              // margin="dense"
               variant="outlined"
             >
               {workOrderStatus.map(option => (

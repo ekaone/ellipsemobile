@@ -7,8 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -20,8 +18,8 @@ const useStyles = makeStyles(theme => ({
   },
   form: {
     '& > *': {
-      margin: theme.spacing(1),
-      width: 200,
+      margin: theme.spacing(0),
+      width: '100%',
     }
   }
 }));
@@ -52,11 +50,15 @@ export default function LaborWorkedOverride(props) {
             <form className={classes.form} noValidate autoComplete="off">
               <TextField id="outlined-basic" label="Date" variant="outlined" />
               <br />
+              <br />
               <TextField id="outlined-basic" label="Hours Worked" variant="outlined" />
+              <br />
               <br />
               <TextField id="outlined-basic" label="Labor Class" variant="outlined" />
               <br />
+              <br />
               <TextField id="outlined-basic" label="Earn Class" variant="outlined" />
+              <br />
               <br />
               <Button variant="contained" color="primary">Apply</Button>
             </form>
