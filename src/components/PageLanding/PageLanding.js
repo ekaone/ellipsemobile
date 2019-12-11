@@ -11,9 +11,10 @@ import Badge from '@material-ui/core/Badge';
 
 // @material-ui/icons
 import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import WorkIcon from '@material-ui/icons/Work';
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import InboxIcon from '@material-ui/icons/Inbox';
+import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 
 // components unit
@@ -51,11 +52,35 @@ function PageLanding() {
     history.push(id)
   }
 
+  const badgeIconWorkOrder = (
+    <Badge className={classes.margin} badgeContent={7} color="secondary">
+      <WorkIcon fontSize="small" />
+    </Badge>
+  )
+
+  const badgeIconApproval = (
+    <Badge className={classes.margin} badgeContent={2} color="secondary">
+      <EventNoteIcon fontSize="small" />
+    </Badge>
+  )
+
+  const badgeIconInbox = (
+    <Badge className={classes.margin} badgeContent={12} color="secondary">
+      <InboxIcon fontSize="small" />
+    </Badge>
+  )
+
+  const badgeIconEquipment = (
+    <Badge className={classes.margin} badgeContent={1} color="secondary">
+      <EmojiTransportationIcon fontSize="small" />
+    </Badge>
+  )
+
   const notificationItem = [
-    { id: 1, value: 'Sent mail', icon: <InboxIcon fontSize="small" /> },
-    { id: 2, value: 'Drafts', icon: <DraftsIcon fontSize="small" /> },
-    { id: 3, value: 'Inbox', icon: <SendIcon fontSize="small" /> },
-    { id: 4, value: 'AC Unit', icon: <AcUnitIcon fontSize="small" /> },
+    { id: 1, value: 'Work Order', icon: badgeIconWorkOrder },
+    { id: 2, value: 'Approval', icon: badgeIconApproval },
+    { id: 3, value: 'Inbox', icon: badgeIconInbox },
+    { id: 4, value: 'Equipment', icon: badgeIconEquipment },
   ]
   
 

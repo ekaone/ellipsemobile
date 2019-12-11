@@ -18,3 +18,14 @@ export const workOrderList = [
   { id: 3, name: 'BRACKET MODIFICATION', number: '00000007' },
   { id: 4, name: 'DIAGNOSTIC TOOL', number: '00000009' },
 ]
+
+export const peopleAssignTo = [
+  { id: 1, name: 'Heru Priyanto' },
+  { id: 2, name: 'Agus Sanjaya' },
+  { id: 3, name: 'Ahmad Dahlan' },
+  { id: 4, name: 'Iwan' },
+  { id: 5, name: 'Sari Ismawati' },
+  { id: 6, name: 'Syukur Hasanudin' },
+  { id: 7, name: 'Ari Wibowo' },
+  { id: 8, name: 'Somad Abdullah' },
+]
