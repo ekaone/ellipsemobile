@@ -11,11 +11,6 @@ import Badge from '@material-ui/core/Badge';
 
 // @material-ui/icons
 import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
-import WorkIcon from '@material-ui/icons/Work';
-import EventNoteIcon from '@material-ui/icons/EventNote';
-import InboxIcon from '@material-ui/icons/Inbox';
-import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
-import AcUnitIcon from '@material-ui/icons/AcUnit';
 
 // components unit
 import View from './View'
@@ -42,47 +37,14 @@ function PageLanding() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleCloseMenu = () => {
+  const handleCloseMenu = (path) => {
     setAnchorEl(null);
+    history.push(path)
   };
-
-  const handleClick = (id) => {
-    // const item = Items.find(itm => itm.id === id)
-    // console.log(item)
-    history.push(id)
-  }
-
-  const badgeIconWorkOrder = (
-    <Badge className={classes.margin} badgeContent={7} color="secondary">
-      <WorkIcon fontSize="small" />
-    </Badge>
-  )
-
-  const badgeIconApproval = (
-    <Badge className={classes.margin} badgeContent={2} color="secondary">
-      <EventNoteIcon fontSize="small" />
-    </Badge>
-  )
-
-  const badgeIconInbox = (
-    <Badge className={classes.margin} badgeContent={12} color="secondary">
-      <InboxIcon fontSize="small" />
-    </Badge>
-  )
-
-  const badgeIconEquipment = (
-    <Badge className={classes.margin} badgeContent={1} color="secondary">
-      <EmojiTransportationIcon fontSize="small" />
-    </Badge>
-  )
-
-  const notificationItem = [
-    { id: 1, value: 'Work Order', icon: badgeIconWorkOrder },
-    { id: 2, value: 'Approval', icon: badgeIconApproval },
-    { id: 3, value: 'Inbox', icon: badgeIconInbox },
-    { id: 4, value: 'Equipment', icon: badgeIconEquipment },
-  ]
   
+  const handleClick = (path) => {
+    history.push(path)
+  }
 
   return (
     <>
@@ -107,7 +69,6 @@ function PageLanding() {
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               handleClose={handleCloseMenu}
-              notificationItem={notificationItem}
             />
           </Grid>
         </Grid>
