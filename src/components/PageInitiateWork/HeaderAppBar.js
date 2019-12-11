@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import Divider from '@material-ui/core/Divider';
 
 // @material-ui/icons
 import HomeIcon from '@material-ui/icons/Home';
@@ -90,8 +91,11 @@ export default function HeaderAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={() => handleClose('setting')}>Setting</MenuItem>
-                <MenuItem onClick={() => handleClose('refresh')}>Refresh</MenuItem>
+                <MenuItem>Create WO</MenuItem>
+                <MenuItem>Status</MenuItem>
+                <Divider style={{ margin: '7px' }} />
+                <MenuItem>Setting</MenuItem>
+                <MenuItem>Refresh</MenuItem>
               </Menu>
             </div>
         </Toolbar>
