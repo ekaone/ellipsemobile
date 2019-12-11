@@ -14,6 +14,7 @@ import NotificationImportantIcon from '@material-ui/icons/NotificationImportant'
 
 // components unit
 import View from './View'
+import NotificationMenuList from './NotificationMenuList'
 import { Items } from './Data'
 
 const useStyles = makeStyles(theme => ({
@@ -29,6 +30,16 @@ const useStyles = makeStyles(theme => ({
 function PageLanding() {
   const classes = useStyles();
   const history = useHistory();
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClickMenu = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
 
   const handleClick = (id) => {
     // const item = Items.find(itm => itm.id === id)
@@ -52,9 +63,14 @@ function PageLanding() {
             </Typography>
           </Grid>
           <Grid item xs={1}>
-            <Badge className={classes.margin} badgeContent={4} color="secondary">
+            <Badge onClick={handleClickMenu} className={classes.margin} badgeContent={4} color="secondary">
               <NotificationImportantIcon color="primary" style={{ fontSize: '30px' }} />
             </Badge>
+            <NotificationMenuList 
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              handleClose={handleCloseMenu}
+            />
           </Grid>
         </Grid>
         <br />
@@ -73,8 +89,6 @@ function PageLanding() {
           }
         </Grid>
       </div>
-    
-    
     </>
   )
 }
