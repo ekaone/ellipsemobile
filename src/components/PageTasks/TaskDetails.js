@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button';
 
 // @material-ui/icons
 import WorkIcon from '@material-ui/icons/Work';
@@ -24,8 +25,8 @@ import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 import HeaderAppBarDetails from './HeaderAppBarDetails'
 import { 
   Items,
-  DefectAttribute,
-  FailureMode 
+  FailureMode,
+  FailureCondition 
 } from './Data'
 
 const useStyles = makeStyles(theme => ({
@@ -62,11 +63,16 @@ function TaskDetails() {
 
   const data = Items.find(itm => itm.id === obj)
 
-  const [defect, setDefect] = useState('07 BROKEN');
+  const [failMode, setFailMode] = useState('07 BROKEN');
+  const [failCondition, setFailCondition] = useState('01 FACTORY DEFFECTIVE');
 
-  const handleChange = event => {
-    setDefect(event.target.value);
+  const handleChangeFailMode = event => {
+    setFailMode(event.target.value);
   };
+
+  const handleChangeFailCondition = event => {
+    setFailCondition(event.target.value)
+  }
 
   return (
     <>
@@ -175,15 +181,15 @@ function TaskDetails() {
           Administrator, System ADMIN
         </Typography>
         <br />
-        <TextField margin="dense" id="outlined-basic" label="Part Causing Failure" variant="outlined" />
+        <TextField className={classes.textField} margin="dense" id="outlined-basic" label="Part Causing Failure" variant="outlined" />
         <br />
         <TextField
             id="outlined-select-fail-mode"
             select
             label="Failure Mode"
             className={classes.textField}
-            value={defect}
-            onChange={handleChange}
+            value={failMode}
+            onChange={handleChangeFailMode}
             SelectProps={{
               MenuProps: {
                 className: classes.menu,
@@ -198,6 +204,33 @@ function TaskDetails() {
               </MenuItem>
             ))}
           </TextField>
+          <br />
+          <TextField
+            id="outlined-select-fail-mode"
+            select
+            label="Failure Condition"
+            className={classes.textField}
+            value={failCondition}
+            onChange={handleChangeFailCondition}
+            SelectProps={{
+              MenuProps: {
+                className: classes.menu,
+              },
+            }}
+            margin="dense"
+            variant="outlined"
+          >
+            {FailureCondition.map(option => (
+              <MenuItem key={option.id} value={option.value}>
+                {option.value}
+              </MenuItem>
+            ))}
+          </TextField>
+          <br />
+          <br />
+          <Button variant="contained" color="primary">
+            Save
+          </Button>
       </Paper>
       </div>
     </>
