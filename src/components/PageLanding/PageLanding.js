@@ -11,6 +11,10 @@ import Badge from '@material-ui/core/Badge';
 
 // @material-ui/icons
 import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import AcUnitIcon from '@material-ui/icons/AcUnit';
 
 // components unit
 import View from './View'
@@ -47,6 +51,14 @@ function PageLanding() {
     history.push(id)
   }
 
+  const notificationItem = [
+    { id: 1, value: 'Sent mail', icon: <InboxIcon fontSize="small" /> },
+    { id: 2, value: 'Drafts', icon: <DraftsIcon fontSize="small" /> },
+    { id: 3, value: 'Inbox', icon: <SendIcon fontSize="small" /> },
+    { id: 4, value: 'AC Unit', icon: <AcUnitIcon fontSize="small" /> },
+  ]
+  
+
   return (
     <>
       <div className={classes.root}>
@@ -70,6 +82,7 @@ function PageLanding() {
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               handleClose={handleCloseMenu}
+              notificationItem={notificationItem}
             />
           </Grid>
         </Grid>
