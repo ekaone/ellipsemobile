@@ -34,8 +34,8 @@ function App() {
     <>
       <CssBaseline />
       {/* use basename as below when DEPLOY */}
-      {/* <Router basename={process.env.PUBLIC_URL}> */}
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
+      {/* <Router> */}
         <Switch>
           <Route exact path="/" component={PageLogin} />
           <Route exact path="/page-landing" component={PageLanding} />
