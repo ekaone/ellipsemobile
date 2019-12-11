@@ -7,6 +7,10 @@ import {
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Badge from '@material-ui/core/Badge';
+
+// @material-ui/icons
+import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
 
 // components unit
 import View from './View'
@@ -15,6 +19,10 @@ import { Items } from './Data'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    padding: theme.spacing(2, 2)
+  },
+  margin: {
+    margin: theme.spacing(1, 0),
   }
 }));
 
@@ -31,13 +39,25 @@ function PageLanding() {
   return (
     <>
       <div className={classes.root}>
-        <Typography 
-          style={{ textAlign: 'center', paddingTop: '10px', paddingBottom: '10px' }} 
-          variant="h5" 
-          color="primary"
-        >
-          EMS SaaS Apps
-        </Typography>
+        <Grid container className={classes.grid} >
+          <Grid item xs={1}>
+          </Grid>
+          <Grid item xs={10}>
+            <Typography 
+              style={{ textAlign: 'center' }} 
+              variant="h4" 
+              color="primary"
+            >
+              EMS SaaS Apps 
+            </Typography>
+          </Grid>
+          <Grid item xs={1}>
+            <Badge className={classes.margin} badgeContent={4} color="secondary">
+              <NotificationImportantIcon color="primary" style={{ fontSize: '30px' }} />
+            </Badge>
+          </Grid>
+        </Grid>
+        <br />
         <Grid container style={{ padding: '7px' }} spacing={1}>
           {
             Items.map(item => (
