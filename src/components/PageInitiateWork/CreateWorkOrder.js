@@ -69,11 +69,11 @@ function CreateWorkOrder() {
       <Grid container spacing={1} style={{ padding: '1px 10px' }}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
+            <center><h2>Number: <u>00000003</u></h2></center>
             <form className={classes.form} noValidate autoComplete="off">
               <TextField id="outlined-basic" label="Work Order User Status" variant="outlined" />
               <br />
               <br />
-              {/* <TextField id="outlined-basic" label="Assign To" variant="outlined" /> */}
               <TextFieldAssignTo />
               <br />
               <br />
