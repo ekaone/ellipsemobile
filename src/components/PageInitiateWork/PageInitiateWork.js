@@ -51,14 +51,21 @@ const WorkOrderList = (props) => (
 function PageInitiateWork() {
   const classes = useStyles();
   const [equipment, setEquipment] = useState('01 FACTORY DEFFECTIVE')
+  const [value, setValue] = useState('EX250-0003 EXCAVATOR KOMATSUPC3000-6')
   
   const handleChangeEquipment = event => {
     setEquipment(event.target.value)
   }
 
+  const handleChangeWo = event => {
+    setValue(event.target.value)
+  }
+
   const handleWorkOrder = (name) => {
     console.log(name)
   }
+
+  console.log(value)
 
   return (
     <>
@@ -70,10 +77,11 @@ function PageInitiateWork() {
               <TextField 
                 className={classes.textField} 
                 margin="dense" 
-                value="EX250-0003 EXCAVATOR KOMATSUPC3000-6" 
+                value={value} 
                 id="outlined-basic" 
                 label="Equipment Reference" 
                 variant="outlined" 
+                onChange={handleChangeWo}
               />
             </Grid>
             <Grid item xs={12}>

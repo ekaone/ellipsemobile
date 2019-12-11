@@ -48,7 +48,7 @@ function PageLanding() {
               variant="h4" 
               color="primary"
             >
-              EMS SaaS Apps 
+              <b>EMS</b> PARAMITRA
             </Typography>
           </Grid>
           <Grid item xs={1}>
@@ -58,7 +58,7 @@ function PageLanding() {
           </Grid>
         </Grid>
         <br />
-        <Grid container style={{ padding: '7px' }} spacing={1}>
+        <Grid container spacing={1}>
           {
             Items.map(item => (
               <Grid key={item.id} item xs={12}>
