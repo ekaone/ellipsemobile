@@ -71,19 +71,19 @@ function CreateWorkOrder() {
           <Paper className={classes.paper}>
             <center><h2>Number: <u>00000003</u></h2></center>
             <form className={classes.form} noValidate autoComplete="off">
-              <TextField id="outlined-basic" label="Work Order User Status" variant="outlined" />
+              <TextField id="outlined-basic1" label="Work Order User Status" variant="outlined" />
               <br />
               <br />
               <TextFieldAssignTo />
               <br />
               <br />
-              <TextField id="outlined-basic" label="Parent Work Order" variant="outlined" />
+              <TextField id="outlined-basic2" label="Parent Work Order" variant="outlined" />
               <br />
               <br />
-              <TextField id="outlined-basic" label="Include Project Hierarchy" variant="outlined" />
+              <TextField id="outlined-basic3" label="Include Project Hierarchy" variant="outlined" />
               <br />
               <br />
-              <TextField id="outlined-basic" label="Job Estimate" variant="outlined" />
+              <TextField id="outlined-basic4" label="Job Estimate" variant="outlined" />
               <br />
               <br />
               <Button variant="contained" color="primary">Save</Button>
