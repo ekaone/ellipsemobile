@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ellipsemobile/static/js/main.32c506e5.chunk.js",
-    "main.js.map": "/ellipsemobile/static/js/main.32c506e5.chunk.js.map",
+    "main.js": "/ellipsemobile/static/js/main.ed68617f.chunk.js",
+    "main.js.map": "/ellipsemobile/static/js/main.ed68617f.chunk.js.map",
     "runtime-main.js": "/ellipsemobile/static/js/runtime-main.f95deca9.js",
     "runtime-main.js.map": "/ellipsemobile/static/js/runtime-main.f95deca9.js.map",
-    "static/js/2.1322c946.chunk.js": "/ellipsemobile/static/js/2.1322c946.chunk.js",
-    "static/js/2.1322c946.chunk.js.map": "/ellipsemobile/static/js/2.1322c946.chunk.js.map",
+    "static/js/2.ade3a2bf.chunk.js": "/ellipsemobile/static/js/2.ade3a2bf.chunk.js",
+    "static/js/2.ade3a2bf.chunk.js.map": "/ellipsemobile/static/js/2.ade3a2bf.chunk.js.map",
     "index.html": "/ellipsemobile/index.html",
-    "precache-manifest.d73460d68ec3ad0730dc563ed4f13f06.js": "/ellipsemobile/precache-manifest.d73460d68ec3ad0730dc563ed4f13f06.js",
+    "precache-manifest.24afd0502685b5a86101ed1f27b8d791.js": "/ellipsemobile/precache-manifest.24afd0502685b5a86101ed1f27b8d791.js",
     "service-worker.js": "/ellipsemobile/service-worker.js",
     "static/media/johnDow.jpg": "/ellipsemobile/static/media/johnDow.7ac7c797.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f95deca9.js",
-    "static/js/2.1322c946.chunk.js",
-    "static/js/main.32c506e5.chunk.js"
+    "static/js/2.ade3a2bf.chunk.js",
+    "static/js/main.ed68617f.chunk.js"
   ]
 }
