@@ -57,7 +57,6 @@ function PageApproval() {
     <>
       <HeaderAppBar />
       <br />
-      <br />
       {
         ApprovalItems.map(itm => (
           <AprrovalList 

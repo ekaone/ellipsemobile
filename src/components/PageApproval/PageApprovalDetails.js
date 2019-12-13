@@ -83,8 +83,6 @@ function PageApprovalDetails() {
   return (
     <>
       <HeaderAppBarRequisition />
-      <br />
-      <br />
       {
         PurchaseRequisition.map(itm => (
           <AprrovalDetails 
