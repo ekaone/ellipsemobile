@@ -3,13 +3,9 @@ import React from 'react'
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 
 // @material-ui/icons
-import DescriptionIcon from '@material-ui/icons/Description';
 import Fab from '@material-ui/core/Fab';
 
 // components

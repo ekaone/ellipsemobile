@@ -9,7 +9,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 // components
 import HeaderAppBar from './HeaderAppBar'
-import { PurchaseRequisition } from './Data'
+import { PurchaseRequisitionDetails } from './Data'
 
 
 const useStyles = makeStyles(theme => ({
@@ -47,9 +47,9 @@ const AprrovalDetails = (props) => (
             size="large"
             aria-label="large outlined secondary button group"
           >
-            <Button onClick={props.clickButtonApprove}>APPROVE</Button>
-            <Button onClick={props.clickButtonReject}>REJECT</Button>
-            <Button onClick={props.clickButtonEndorse}>ENDORSE</Button>
+            <Button onClick={props.clickButtonApprove}>REJECT</Button>
+            <Button onClick={props.clickButtonRedirect}>REDIRECT</Button>
+            <Button onClick={props.clickButtonEndorse}>APPROVE</Button>
           </ButtonGroup>
         </center>
         </Grid>
@@ -60,19 +60,19 @@ const AprrovalDetails = (props) => (
   </>
 )
 
-const clickButtonApprove = (btnName, id, item) => {
-  console.log(btnName+ " - " + id +" - "+ item)
-}
-
 const clickButtonReject = (btnName, id, item) => {
   console.log(btnName+ " - " + id +" - "+ item)
 }
 
-const clickButtonEndorse = (btnName, id, item) => {
+const clickButtonRedirect = (btnName, id, item) => {
   console.log(btnName+ " - " + id +" - "+ item)
 }
 
-function PageApprovalDetails() {
+const clickButtonApprove = (btnName, id, item) => {
+  console.log(btnName+ " - " + id +" - "+ item)
+}
+
+function PageApprovalMoreDetails() {
   const classes = useStyles();
 
   return (
@@ -81,7 +81,7 @@ function PageApprovalDetails() {
       <br />
       <br />
       {
-        PurchaseRequisition.map(itm => (
+        PurchaseRequisitionDetails.map(itm => (
           <AprrovalDetails 
             key={itm.id}
             paper={classes.paper}
@@ -89,9 +89,9 @@ function PageApprovalDetails() {
             currencyValue={itm.currencyValue}
             requisition={itm.requisition}
             dateCreated={itm.dateCreated}
-            clickButtonApprove={() => clickButtonApprove('approve', itm.id, itm.requisition)}
-            clickButtonReject={() => clickButtonReject('reject', itm.id, itm.requisition)}
-            clickButtonEndorse={() => clickButtonEndorse('endorse', itm.id, itm.requisition)}
+            clickButtonApprove={() => clickButtonReject('reject', itm.id, itm.requisition)}
+            clickButtonReject={() => clickButtonRedirect('redirect', itm.id, itm.requisition)}
+            clickButtonEndorse={() => clickButtonApprove('approve', itm.id, itm.requisition)}
           />
         ))
       }
@@ -99,4 +99,4 @@ function PageApprovalDetails() {
   )
 }
 
-export default PageApprovalDetails
+export default PageApprovalMoreDetails

@@ -28,7 +28,8 @@ import {
   PageLaborWorked,
   PageInitiateWork,
   PageCreateWorkOrder,
-  PageApprovalDetails 
+  PageApprovalDetails,
+  PageApprovalMoreDetails 
 } from './components'
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={PageLogin} />
           <Route exact path="/page-landing" component={PageLanding} />
-          <Route exact path="/page-approval" component={PageApprovalDetails} />
+          <Route exact path="/page-approval" component={PageApprovalMoreDetails} />
           <Route exact path="/page-tasks" component={PageTasks} />
           <Route exact path="/page-manager" component={PageManager} />
           <Route exact path="/page-initiatework" component={PageInitiateWork} />
