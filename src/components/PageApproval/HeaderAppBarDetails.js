@@ -11,7 +11,6 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 
-
 // @material-ui/icons
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
@@ -27,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeaderAppBar() {
+export default function HeaderAppBarRequisition() {
   const classes = useStyles();
   const history = useHistory()
   
@@ -48,7 +47,7 @@ export default function HeaderAppBar() {
           </Grid>
           <Grid item xs={8}>
             <Typography variant="h6" align="center" className={classes.title}>
-              Approvals
+              Details
             </Typography>
           </Grid>
           <Grid item xs={2}>

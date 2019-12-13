@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeaderAppBar() {
+export default function HeaderAppBarRequisition() {
   const classes = useStyles();
   const history = useHistory()
   
@@ -48,7 +48,7 @@ export default function HeaderAppBar() {
           </Grid>
           <Grid item xs={8}>
             <Typography variant="h6" align="center" className={classes.title}>
-              Approvals
+              Purchase Requisition Approvals
             </Typography>
           </Grid>
           <Grid item xs={2}>

@@ -11,7 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 
 // components
-import HeaderAppBar from './HeaderAppBar'
+import HeaderAppBarDetails from './HeaderAppBarDetails'
 import { 
   PurchaseRequisitionDetails,
   Types
@@ -160,7 +160,7 @@ function PageApprovalMoreDetails() {
 
   return (
     <>
-      <HeaderAppBar />
+      <HeaderAppBarDetails />
       {
         PurchaseRequisitionDetails.map(itm => (
           <AprrovalMoreDetails 

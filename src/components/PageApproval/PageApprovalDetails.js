@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 // components
-import HeaderAppBar from './HeaderAppBar'
+import HeaderAppBarRequisition from './HeaderAppBarRequisition'
 import { PurchaseRequisition } from './Data'
 
 
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 const AprrovalDetails = (props) => (
   <>
     <div style={{ padding: '7px' }}>
-    <Paper className={props.paper}>
+    <Paper className={props.paper} onClick={props.clickGoMoreDetails}>
       <Grid container spacing={1}>
         <Grid item xs={12}>
           <b>Authorizations Amount</b>
@@ -74,10 +75,15 @@ const clickButtonEndorse = (btnName, id, item) => {
 
 function PageApprovalDetails() {
   const classes = useStyles();
+  const history = useHistory()
+
+  const clickGoMoreDetails = () => {
+    history.push("/page-approval/moredetails")
+  }
 
   return (
     <>
-      <HeaderAppBar />
+      <HeaderAppBarRequisition />
       <br />
       <br />
       {
@@ -92,6 +98,7 @@ function PageApprovalDetails() {
             clickButtonApprove={() => clickButtonApprove('approve', itm.id, itm.requisition)}
             clickButtonReject={() => clickButtonReject('reject', itm.id, itm.requisition)}
             clickButtonEndorse={() => clickButtonEndorse('endorse', itm.id, itm.requisition)}
+            clickGoMoreDetails={clickGoMoreDetails}
           />
         ))
       }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,9 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const clickApprovalDetails = (id) => {
-  console.log(id)
-}
+
 
 const AprrovalList = (props) => (
   <>
@@ -47,6 +46,12 @@ const AprrovalList = (props) => (
 
 function PageApproval() {
   const classes = useStyles();
+  const history = useHistory()
+
+  const clickApprovalDetails = (id) => {
+    console.log(id)
+    history.push("/page-approval/details")
+  }
 
   return (
     <>
