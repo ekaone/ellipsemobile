@@ -56,7 +56,7 @@ function PageApprovalMoreDetails() {
     <TextField
       id="outlined-select-type"
       select
-      label="Type"
+      label="Types"
       value={type}
       onChange={handleChangeType}
       SelectProps={{
