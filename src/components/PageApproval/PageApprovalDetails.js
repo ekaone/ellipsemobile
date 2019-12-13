@@ -41,21 +41,20 @@ const AprrovalDetails = (props) => (
           <br />
           {props.dateCreated}
         </Grid>
-        <Grid item xs={12}>
-        <center>  
-          <ButtonGroup
-            color="secondary"
-            size="large"
-            aria-label="large outlined secondary button group"
-          >
-            <Button onClick={props.clickButtonApprove}>APPROVE</Button>
-            <Button onClick={props.clickButtonReject}>REJECT</Button>
-            <Button onClick={props.clickButtonEndorse}>ENDORSE</Button>
-          </ButtonGroup>
-        </center>
-        </Grid>
       </Grid>
     </Paper>
+    <br />
+    <center>  
+      <ButtonGroup
+        color="secondary"
+        size="large"
+        aria-label="large outlined secondary button group"
+      >
+        <Button onClick={props.clickButtonApprove}>APPROVE</Button>
+        <Button onClick={props.clickButtonReject}>REJECT</Button>
+        <Button onClick={props.clickButtonEndorse}>ENDORSE</Button>
+      </ButtonGroup>
+    </center>
     <br />
     </div>
   </>

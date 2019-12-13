@@ -138,21 +138,20 @@ function PageApprovalMoreDetails() {
               <br />
               <TextFieldType classes={classes.textField} />
             </Grid>
-            <Grid item xs={12}>
-              <center>  
-                <ButtonGroup
-                  color="secondary"
-                  size="large"
-                  aria-label="large outlined secondary button group"
-                >
-                  <Button onClick={props.clickButtonReject}>REJECT</Button>
-                  <Button onClick={props.clickButtonRedirect}>REDIRECT</Button>
-                  <Button onClick={props.clickButtonApprove}>APPROVE</Button>
-                </ButtonGroup>
-              </center>
-            </Grid>
           </Grid>
         </Paper>
+        <br />
+        <center>  
+          <ButtonGroup
+            color="secondary"
+            size="large"
+            aria-label="large outlined secondary button group"
+          >
+            <Button onClick={props.clickButtonReject}>REJECT</Button>
+            <Button onClick={props.clickButtonRedirect}>REDIRECT</Button>
+            <Button onClick={props.clickButtonApprove}>APPROVE</Button>
+          </ButtonGroup>
+        </center>
         <br />
       </div>
     </>
