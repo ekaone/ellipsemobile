@@ -14,33 +14,44 @@ import Fab from '@material-ui/core/Fab';
 
 // components
 import HeaderAppBar from './HeaderAppBar'
-import { ApprovalItems } from './Data'
+import { PurchaseRequisition } from './Data'
 
 
 const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(1, 2),
     textAlign: 'center',
-    fontSize: '22px',
+    fontSize: '19px',
   }
 }));
 
-const clickApprovalDetails = (id) => {
-  console.log(id)
-}
 
 const AprrovalList = (props) => (
   <>
     <div style={{ padding: '7px' }}>
-    <Paper className={props.paper} onClick={props.clickApprovalDetails}>
+    <Paper className={props.paper}>
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Fab color="secondary" aria-label="edit">
-            {props.numberApproval}
-          </Fab>
+          <b>Authorizations Amount</b>
+          <br />
+          {props.currency} {props.currencyValue}
         </Grid>
-        <Grid item xs={12}>
-          {props.ApprovalItems}
+        <Grid item xs={6}>
+          <b>Requisition</b>
+          {props.requisition}
+        </Grid>
+        <Grid item xs={6}>
+          <b>Date Created</b>
+          {props.dateCreated}
+        </Grid>
+        <Grid item xs={4}>
+          
+        </Grid>
+        <Grid item xs={4}>
+          
+        </Grid>
+        <Grid item xs={4}>
+          
         </Grid>
       </Grid>
     </Paper>
@@ -49,7 +60,7 @@ const AprrovalList = (props) => (
   </>
 )
 
-function PageApproval() {
+function PageApprovalDetails() {
   const classes = useStyles();
 
   return (
@@ -72,4 +83,4 @@ function PageApproval() {
   )
 }
 
-export default PageApproval
+export default PageApprovalDetails
