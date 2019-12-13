@@ -35,3 +35,12 @@ export const PurchaseRequisitionDetails = [
   //   price: '2.500,00',  
   // }
 ]
+
+export const Types = [
+  { id: 1, name: 'Goods' },
+  { id: 2, name: 'Services' },
+  { id: 3, name: 'Units' },
+  { id: 4, name: 'Food' },
+  { id: 5, name: 'Travelling' },
+  { id: 6, name: 'Other' },
+]
