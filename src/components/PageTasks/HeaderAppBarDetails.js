@@ -51,12 +51,6 @@ export default function HeaderAppBarDetails() {
     if(item === 'labor') {
       history.push("/page-tasks/labor/" + obj)
     }
-    if(item === 'complete') {
-      history.push("/page-tasks/complete")
-    }
-    if(item === 'apply') {
-      history.push("/page-tasks/apply")
-    }
   };
   
   const handleClose = () => {
@@ -103,8 +97,6 @@ export default function HeaderAppBarDetails() {
           >
             <MenuItem onClick={() => handleOpen('inspect')}>Inspect</MenuItem>
             <MenuItem onClick={() => handleOpen('labor')}>Labor</MenuItem>
-            <MenuItem onClick={() => handleOpen('complete')}>Complete</MenuItem>
-            <MenuItem onClick={() => handleOpen('apply')}>Apply</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>

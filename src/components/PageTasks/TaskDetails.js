@@ -15,11 +15,14 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 
 // @material-ui/icons
 import WorkIcon from '@material-ui/icons/Work';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
+
 
 // components unit
 import HeaderAppBarDetails from './HeaderAppBarDetails'
@@ -51,6 +54,9 @@ const useStyles = makeStyles(theme => ({
     // marginLeft: theme.spacing(1),
     // marginRight: theme.spacing(1),
     width: '100%',
+  },
+  input: {
+    display: 'none',
   },
 }));
 
@@ -180,6 +186,15 @@ function TaskDetails() {
         <Typography component="div" variant="subtitle2" color="textPrimary">
           Administrator, System ADMIN
         </Typography>
+        <Divider />
+        <center>
+          <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+          <label htmlFor="icon-button-file">
+            <IconButton color="primary" aria-label="upload picture" component="span">
+              <PhotoCamera style={{ fontSize: '40px', color: 'red' }} />
+            </IconButton>
+          </label>
+        </center>
         <br />
         <TextField 
           className={classes.textField} 
