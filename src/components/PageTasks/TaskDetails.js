@@ -16,12 +16,14 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import Fab from '@material-ui/core/Fab';
 
 // @material-ui/icons
 import WorkIcon from '@material-ui/icons/Work';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
 
 
 // components unit
@@ -57,6 +59,11 @@ const useStyles = makeStyles(theme => ({
   },
   input: {
     display: 'none',
+  },
+  fab: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
   },
 }));
 
@@ -187,14 +194,15 @@ function TaskDetails() {
           Administrator, System ADMIN
         </Typography>
         <Divider />
-        <center>
+        {/* <center>
           <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
           <label htmlFor="icon-button-file">
             <IconButton color="primary" aria-label="upload picture" component="span">
               <PhotoCamera style={{ fontSize: '40px', color: 'red' }} />
             </IconButton>
           </label>
-        </center>
+        </center> */}
+
         <br />
         <TextField 
           className={classes.textField} 
@@ -259,6 +267,9 @@ function TaskDetails() {
             Save
           </Button>
       </Paper>
+      <Fab className={classes.fab} color="primary" aria-label="add">
+        <CameraAltIcon />
+      </Fab>
       </div>
     </>
   )

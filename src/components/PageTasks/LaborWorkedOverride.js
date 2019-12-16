@@ -48,7 +48,18 @@ export default function LaborWorkedOverride(props) {
           <Paper className={classes.paper}>
             <h2>Override</h2>
             <form className={classes.form} noValidate autoComplete="off">
-              <TextField id="outlined-basic" label="Date" variant="outlined" />
+              {/* <TextField id="outlined-basic" label="Date" variant="outlined" /> */}
+              <TextField
+                id="datetime-local"
+                label="Date Time"
+                type="datetime-local"
+                defaultValue="2020-05-24T10:30"
+                className={classes.textField}
+                variant="outlined"
+                InputLabelProps={{
+                  shrink: true
+                }}
+              />
               <br />
               <br />
               <TextField id="outlined-basic" label="Hours Worked" variant="outlined" />
