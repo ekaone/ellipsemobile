@@ -64,6 +64,7 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+    opacity: 0.7
   },
 }));
 
@@ -267,9 +268,14 @@ function TaskDetails() {
             Save
           </Button>
       </Paper>
-      <Fab className={classes.fab} color="primary" aria-label="add">
-        <CameraAltIcon />
-      </Fab>
+        <Fab className={classes.fab} color="secondary" aria-label="add">
+          <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+          <label htmlFor="icon-button-file">
+            <IconButton style={{ color: "white" }} aria-label="upload picture" component="span">
+              <CameraAltIcon />
+            </IconButton>
+          </label>
+        </Fab>
       </div>
     </>
   )
