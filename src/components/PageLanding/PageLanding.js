@@ -53,13 +53,10 @@ function PageLanding() {
           <Grid item xs={1}>
           </Grid>
           <Grid item xs={10}>
-            <Typography 
-              style={{ textAlign: 'center' }} 
-              variant="h4" 
-              color="primary"
-            >
-              <b>EMS</b> PARAMITRA
-            </Typography>
+            <div style={{ textAlign: 'center' }}>
+              <span style={{ color: '#C00000', fontSize: '50px', fontWeight: 'bold' }}>EMS</span>            
+              <span style={{ color: '#C00000', fontSize: '30px' }}>mobile</span>
+            </div>
           </Grid>
           <Grid item xs={1}>
             <Badge onClick={handleClickMenu} className={classes.margin} badgeContent={4} color="secondary">
