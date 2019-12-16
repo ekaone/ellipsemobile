@@ -55,7 +55,10 @@ function PageLanding() {
           <Grid item xs={10}>
             <div style={{ textAlign: 'center' }}>
               <span style={{ color: '#C00000', fontSize: '50px', fontWeight: 'bold' }}>EMS</span>            
-              <span style={{ color: '#C00000', fontSize: '30px' }}>mobile</span>
+              <span style={{ color: '#757170', fontSize: '30px' }}>mobile</span>
+            </div>
+            <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px' }}>
+              Enterprise Mobile Solution
             </div>
           </Grid>
           <Grid item xs={1}>
