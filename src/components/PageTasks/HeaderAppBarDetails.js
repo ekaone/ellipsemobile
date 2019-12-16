@@ -63,7 +63,7 @@ export default function HeaderAppBarDetails() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
         <Toolbar>
           <IconButton onClick={goPageTasks} edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
             <ArrowBackIosIcon />

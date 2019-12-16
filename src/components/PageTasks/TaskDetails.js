@@ -97,7 +97,7 @@ function TaskDetails() {
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <WorkIcon color="primary" style={{ fontSize: '45px' }} />
+              <WorkIcon style={{ color: 'black', fontSize: '45px' }} />
             </ListItemAvatar>
             <ListItemText
               primary="Work Order"
@@ -119,7 +119,7 @@ function TaskDetails() {
           </ListItem>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <AssignmentTurnedInIcon color="primary" style={{ fontSize: '45px' }}/>
+              <AssignmentTurnedInIcon style={{ color: 'black', fontSize: '45px' }}/>
             </ListItemAvatar>
             <ListItemText
               primary="Task Number"
@@ -140,7 +140,7 @@ function TaskDetails() {
           </ListItem>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <EmojiTransportationIcon color="primary" style={{ fontSize: '45px' }} />
+              <EmojiTransportationIcon style={{ color: 'black', fontSize: '45px' }} />
             </ListItemAvatar>
             <ListItemText
               primary="Equipment"

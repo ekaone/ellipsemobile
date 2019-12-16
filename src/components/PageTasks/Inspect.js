@@ -59,7 +59,7 @@ function Inspect() {
           <List className={classes.root}>
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
-                <EmojiTransportationIcon color="primary" style={{ fontSize: '45px' }} />
+                <EmojiTransportationIcon style={{ color: 'black', fontSize: '45px' }} />
               </ListItemAvatar>
               <ListItemText
                 primary="Equipment"

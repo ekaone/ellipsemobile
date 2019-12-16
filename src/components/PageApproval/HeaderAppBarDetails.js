@@ -38,7 +38,7 @@ export default function HeaderAppBarRequisition() {
   return (
     <>
     <div className={classes.root}>
-      <AppBar position="static" color={'primary'}>
+      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
         <Toolbar>
         {/* <Grid container spacing={1}> */}
           {/* <Grid item xs={2}> */}

@@ -63,7 +63,7 @@ function PageLanding() {
           </Grid>
           <Grid item xs={1}>
             <Badge onClick={handleClickMenu} className={classes.margin} badgeContent={4} color="secondary">
-              <NotificationImportantIcon color="primary" style={{ fontSize: '30px' }} />
+              <NotificationImportantIcon style={{ color: 'black', fontSize: '30px' }} />
             </Badge>
             <NotificationMenuList 
               anchorEl={anchorEl}
