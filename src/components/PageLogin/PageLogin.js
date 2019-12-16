@@ -132,7 +132,7 @@ export default function PageLogin() {
                     }
                 }}
                 >
-                  Forgot password
+                  {/* Forgot password */}
                 </Link>
               </Typography>
           </Grid>
