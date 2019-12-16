@@ -48,9 +48,8 @@ function PageApproval() {
   const classes = useStyles();
   const history = useHistory()
 
-  const clickApprovalDetails = (id) => {
-    console.log(id)
-    history.push("/page-approval/details")
+  const clickApprovalDetails = (id, path) => {
+    history.push(path)
   }
 
   return (
@@ -64,7 +63,7 @@ function PageApproval() {
             numberApproval={itm.numberApproval}
             ApprovalItems={itm.item}
             paper={classes.paper}
-            clickApprovalDetails={() => clickApprovalDetails(itm.id)}
+            clickApprovalDetails={() => clickApprovalDetails(itm.id, itm.path)}
           />
         ))
       }

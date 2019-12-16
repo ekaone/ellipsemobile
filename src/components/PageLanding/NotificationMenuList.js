@@ -53,8 +53,8 @@ export default function NotificationMenuList(props) {
   const notificationItems = [
     { id: 1, value: 'Work Order', icon: badgeIconWorkOrder, path: '/page-tasks' },
     { id: 2, value: 'Approval', icon: badgeIconApproval, path: '/page-approval' },
-    { id: 3, value: 'Inbox', icon: badgeIconInbox, path: '/' },
-    { id: 4, value: 'Equipment', icon: badgeIconEquipment, path: '/page-tasks' },
+    // { id: 3, value: 'Inbox', icon: badgeIconInbox, path: '/' },
+    // { id: 4, value: 'Equipment', icon: badgeIconEquipment, path: '/page-tasks' },
   ]
   
 

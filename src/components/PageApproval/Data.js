@@ -1,5 +1,10 @@
 export const ApprovalItems = [
-  { id: 1, item: 'Purchase Requisition', numberApproval: '2' }
+  { id: 1, item: 'Purchase Requisition', numberApproval: '2', path: '/page-approval/details' },
+  { id: 2, item: 'Work Order', numberApproval: '5', path: '/page-tasks' },
+  { id: 3, item: 'Invoice', numberApproval: '3' },
+  { id: 4, item: 'Timesheet', numberApproval: '1' },
+  { id: 5, item: 'Leaves', numberApproval: '7' },
+  { id: 6, item: 'Delivery Order', numberApproval: '9' }
 ]
 
 export const PurchaseRequisition = [

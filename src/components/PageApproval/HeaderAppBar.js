@@ -11,9 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 
-
 // @material-ui/icons
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,20 +39,21 @@ export default function HeaderAppBar() {
     <div className={classes.root}>
       <AppBar position="static" color={'primary'}>
         <Toolbar>
-        <Grid container spacing={1}>
-          <Grid item xs={2}>
+        {/* <Grid container spacing={0}> */}
+          {/* <Grid item xs={2}> */}
             <IconButton onClick={goBack} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <ArrowBackIosIcon />
+              <HomeIcon />
             </IconButton>
-          </Grid>
-          <Grid item xs={8}>
+          {/* </Grid> */}
+          {/* <Grid item xs={8}> */}
             <Typography variant="h6" align="center" className={classes.title}>
               Approvals
             </Typography>
-          </Grid>
-          <Grid item xs={2}>
-          </Grid>
-          </Grid>
+            <IconButton />
+          {/* </Grid> */}
+          {/* <Grid item xs={2}> */}
+          {/* </Grid> */}
+          {/* </Grid> */}
         </Toolbar>
       </AppBar>
     </div>
