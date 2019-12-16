@@ -18,6 +18,7 @@ import {
   workOrderStatus,
   workOrderList 
 } from './Data'
+import { classes } from 'istanbul-lib-coverage';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   textField: {
     width: '100%',
-  },
+  }
 }));
 
 const WorkOrderList = (props) => (
@@ -33,7 +34,7 @@ const WorkOrderList = (props) => (
     <Paper className={props.paper} onClick={props.clickWorkOrder}>
       <Grid container spacing={1}>
         <Grid item xs={2}>
-          <ViewModuleIcon color="secondary" style={{ fontSize: '40px' }} />
+          <ViewModuleIcon style={{ color: 'grey', fontSize: '40px' }} />
         </Grid>
         <Grid item xs={10}>
           <b>Work Order</b> {props.number}
@@ -83,21 +84,21 @@ function PageInitiateWork() {
               />
             </Grid>
             <Grid item xs={12}>
-            <TextField
-              id="outlined-select-wo-status"
-              select
-              label="WO Status"
-              className={classes.textField}
-              value={equipment}
-              onChange={handleChangeEquipment}
-              SelectProps={{
-                MenuProps: {
-                  className: classes.menu,
-                },
-              }}
-              // margin="dense"
-              variant="outlined"
-            >
+                <TextField
+                  id="outlined-select-wo-status"
+                  select
+                  label="WO Status"
+                  className={classes.textField}
+                  value={equipment}
+                  onChange={handleChangeEquipment}
+                  SelectProps={{
+                    MenuProps: {
+                      className: classes.menu,
+                    },
+                  }}
+                  // margin="dense"
+                  variant="outlined"
+                >
               {workOrderStatus.map(option => (
                 <MenuItem key={option.id} value={option.value}>
                   {option.value}
@@ -106,7 +107,7 @@ function PageInitiateWork() {
             </TextField>   
             </Grid>
             <Grid item xs={12}>
-              <Button style={{ float: "right" }} variant="contained" color="primary">Save</Button>
+              <Button fullWidth variant="contained">Save</Button>
             </Grid>
           </Grid>
           <br />

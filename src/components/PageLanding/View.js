@@ -9,13 +9,14 @@ import CardHeader from '@material-ui/core/CardHeader';
 
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
-import { red } from '@material-ui/core/colors';
+import { red, grey } from '@material-ui/core/colors';
 
 import WorkIcon from '@material-ui/icons/Work';
 
 const useStyles = makeStyles(theme => ({
   avatar: {
-    backgroundColor: red[500],
+    // backgroundColor: red[500],
+    backgroundColor: grey[500],
   },
 }));
 

@@ -7,6 +7,7 @@ import {
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button';
 
 // components unit
 import HeaderAppBarDefect from './HeaderAppBarDefect'
@@ -17,16 +18,16 @@ import {
 
 const useStyles = makeStyles(theme => ({
   container: {
-    display: 'flex',
     flexWrap: 'wrap',
+    width: '100%',
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 300,
+    // marginLeft: theme.spacing(1),
+    // marginRight: theme.spacing(1),
+    width: '100%',
   },
   menu: {
-    width: 150,
+    width: 200,
   },
 }));
 
@@ -51,8 +52,8 @@ function Defect() {
         number={defCp.equipmentNumber}
         component={defCp.component}
       />
-      <form style={{ justifyContent: 'center' }} className={classes.container} noValidate autoComplete="off">
-        <div>
+      {/* <form className={classes.container} noValidate autoComplete="off"> */}
+        <div style={{ padding: '7px' }}>
           <TextField
             id="outlined-select-currency"
             select
@@ -171,8 +172,11 @@ function Defect() {
             margin="normal"
             variant="outlined"
           />
+          <Button variant="contained" className={classes.textField} fullWidth>
+            Save
+          </Button>
         </div>
-      </form>
+      {/* </form> */}
     </>
   )
 }

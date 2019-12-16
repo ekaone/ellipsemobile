@@ -86,7 +86,7 @@ function CreateWorkOrder() {
               <TextField id="outlined-basic4" label="Job Estimate" variant="outlined" />
               <br />
               <br />
-              <Button variant="contained" color="primary">Save</Button>
+              <Button variant="contained" fullWidth>Save</Button>
             </form>
           </Paper>
         </Grid>

@@ -260,11 +260,7 @@ function TaskDetails() {
           </TextField>
           <br />
           <br />
-          <Button 
-            variant="contained" 
-            color="primary"
-            className={classes.textField}  
-          >
+          <Button variant="contained" className={classes.textField} fullWidth>
             Save
           </Button>
       </Paper>
