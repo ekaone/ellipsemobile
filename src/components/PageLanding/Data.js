@@ -1,5 +1,5 @@
 export const Items = [
-  { id: 1, title: 'Initiate Work', subheader: 'Initaite Work Jobs', avatar: 'IW', icon: 'initiate', path: '/page-initiatework' },
+  { id: 1, title: 'Initiate Work', subheader: 'Initiate Work Jobs', avatar: 'IW', icon: 'initiate', path: '/page-initiatework' },
   { id: 2, title: 'Action Work', subheader: 'Work Action', avatar: 'AW', icon: 'action', path: '/page-tasks' },
   { id: 3, title: 'Approval', subheader: 'Approval Jobs', avatar: 'AP', icon: 'approval', path: '/page-approval' },
   // { id: 3, title: 'Stock', subheader: 'Stock Items', avatar: 'S', icon: 'stock' },
