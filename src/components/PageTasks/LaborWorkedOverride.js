@@ -71,7 +71,7 @@ export default function LaborWorkedOverride(props) {
               <TextField id="outlined-basic" label="Earn Class" variant="outlined" />
               <br />
               <br />
-              <Button variant="contained" color="primary">Apply</Button>
+              <Button variant="contained">Apply</Button>
             </form>
           </Paper>
         </Grid>

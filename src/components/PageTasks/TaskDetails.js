@@ -264,7 +264,7 @@ function TaskDetails() {
             Save
           </Button>
       </Paper>
-        <Fab className={classes.fab} color="secondary" aria-label="add">
+        <Fab className={classes.fab} style={{ backgroundColor: 'black' }} aria-label="add">
           <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
           <label htmlFor="icon-button-file">
             <IconButton style={{ color: "white" }} aria-label="upload picture" component="span">

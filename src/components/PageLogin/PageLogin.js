@@ -88,9 +88,13 @@ export default function PageLogin() {
           alignItems="center"
         >
           <Grid item xs={12} lg={12}>
-            <Typography style={{ textAlign: 'center', paddingTop: '30px' }} variant="h4" color="primary">
-              EMS Center 
-            </Typography>
+            <div style={{ textAlign: 'center' }}>
+              <span style={{ color: '#C00000', fontSize: '50px', fontWeight: 'bold' }}>EMS</span>            
+              <span style={{ color: '#757170', fontSize: '30px' }}>mobile</span>
+            </div>
+            <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px' }}>
+              Enterprise Mobile Solution
+            </div>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
               <TextField
                 id="username" 
@@ -111,7 +115,6 @@ export default function PageLogin() {
               <br />
               <Button 
                 variant="contained" 
-                color="primary" 
                 component="div"
                 onClick={handleClick}
               >
@@ -120,7 +123,7 @@ export default function PageLogin() {
             </form>
               <Typography align="center" variant="subtitle1" component="div">
                 <Link 
-                  style={{ textDecoration: 'none'}} 
+                  style={{ textDecoration: 'none' }} 
                   // to="/page-forgotpassword/12"
                   to={{
                     pathname: "/page-forgotpassword",

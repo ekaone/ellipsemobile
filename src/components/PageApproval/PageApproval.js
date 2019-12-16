@@ -30,7 +30,7 @@ const AprrovalList = (props) => (
     <Paper className={props.paper} onClick={props.clickApprovalDetails}>
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Fab color="secondary" aria-label="edit">
+          <Fab aria-label="edit">
             {props.numberApproval}
           </Fab>
         </Grid>

@@ -57,7 +57,7 @@ export default function LaborWorkedCost(props) {
               <TextField id="outlined-basic" label="Employee" variant="outlined" />
               <br />
               <br />
-              <Button variant="contained" color="primary">Apply</Button>
+              <Button variant="contained">Apply</Button>
             </form>
           </Paper>
         </Grid>

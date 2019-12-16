@@ -57,9 +57,6 @@ function PageLanding() {
               <span style={{ color: '#C00000', fontSize: '50px', fontWeight: 'bold' }}>EMS</span>            
               <span style={{ color: '#757170', fontSize: '30px' }}>mobile</span>
             </div>
-            <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px' }}>
-              Enterprise Mobile Solution
-            </div>
           </Grid>
           <Grid item xs={1}>
             <Badge onClick={handleClickMenu} className={classes.margin} badgeContent={4} color="secondary">

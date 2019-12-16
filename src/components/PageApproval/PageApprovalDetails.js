@@ -46,7 +46,6 @@ const AprrovalDetails = (props) => (
     <br />
     <center>  
       <ButtonGroup
-        color="secondary"
         size="large"
         aria-label="large outlined secondary button group"
       >
