@@ -11,9 +11,11 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 
-
 // @material-ui/icons
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
+// components
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,7 +40,7 @@ export default function HeaderAppBarRequisition() {
   return (
     <>
     <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
+      <AppBar position="static" style={{ backgroundColor: Color.appBar }}>
         <Toolbar>
         {/* <Grid container spacing={1}> */}
           {/* <Grid item xs={2}> */}

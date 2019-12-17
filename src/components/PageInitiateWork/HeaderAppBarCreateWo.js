@@ -13,6 +13,8 @@ import IconButton from '@material-ui/core/IconButton';
 // @material-ui/icons
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
+// components
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,7 +38,7 @@ export default function HeaderAppBarCreateWo() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
+      <AppBar position="static" style={{ backgroundColor: Color.appBar }}>
         <Toolbar>
           <IconButton onClick={goPreviousPage} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <ArrowBackIosIcon />

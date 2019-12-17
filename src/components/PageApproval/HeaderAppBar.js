@@ -14,6 +14,9 @@ import Grid from '@material-ui/core/Grid';
 // @material-ui/icons
 import HomeIcon from '@material-ui/icons/Home';
 
+// components
+import { Color } from '../Colors/Colors'
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -37,7 +40,7 @@ export default function HeaderAppBar() {
   return (
     <>
     <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
+      <AppBar position="static" style={{ backgroundColor: Color.appBar }}>
         <Toolbar>
         {/* <Grid container spacing={0}> */}
           {/* <Grid item xs={2}> */}

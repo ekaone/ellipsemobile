@@ -17,6 +17,8 @@ import Divider from '@material-ui/core/Divider';
 import HomeIcon from '@material-ui/icons/Home';
 import ListIcon from '@material-ui/icons/List';
 
+// components
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -63,7 +65,7 @@ export default function HeaderAppBar() {
   return (
     <>
     <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
+      <AppBar position="static" style={{ backgroundColor: Color.appBar }}>
         <Toolbar>
           <IconButton onClick={goPageLanding} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <HomeIcon />

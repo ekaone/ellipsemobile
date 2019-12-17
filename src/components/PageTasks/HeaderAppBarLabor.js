@@ -15,6 +15,8 @@ import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
+// components
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,7 +46,7 @@ export default function HeaderAppBarLabor() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
+      <AppBar position="static" style={{ backgroundColor: Color.appBar }}>
         <Toolbar>
           <IconButton onClick={goPreviousPage} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <ArrowBackIosIcon />

@@ -16,6 +16,9 @@ import Menu from '@material-ui/core/Menu';
 // @material-ui/icons
 import HomeIcon from '@material-ui/icons/Home';
 
+// components
+import { Color } from '../Colors/Colors'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -57,7 +60,7 @@ export default function HeaderAppBar() {
   return (
     <>
     <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'grey' }}>
+      <AppBar position="static" style={{ backgroundColor: Color.appBar }}>
         <Toolbar>
           <IconButton onClick={goPageLanding} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <HomeIcon />
