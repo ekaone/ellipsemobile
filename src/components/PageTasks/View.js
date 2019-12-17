@@ -15,7 +15,9 @@ import WorkIcon from '@material-ui/icons/Work';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 
-// components unit
+// components
+import { Color } from '../Colors/Colors'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,7 +43,7 @@ export default function View(props) {
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <WorkIcon style={{ color: 'black', fontSize: '45px' }} />
+              <WorkIcon style={{ color: Color.icon, fontSize: '45px' }} />
             </ListItemAvatar>
             <ListItemText
               primary="Work Order"
@@ -63,7 +65,7 @@ export default function View(props) {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <AssignmentTurnedInIcon style={{ color: 'black', fontSize: '45px' }}/>
+              <AssignmentTurnedInIcon style={{ color: Color.icon, fontSize: '45px' }}/>
             </ListItemAvatar>
             <ListItemText
               primary="Task Number"
@@ -85,7 +87,7 @@ export default function View(props) {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <EmojiTransportationIcon style={{color: 'black', fontSize: '45px' }} />
+              <EmojiTransportationIcon style={{color: Color.icon, fontSize: '45px' }} />
             </ListItemAvatar>
             <ListItemText
               primary="Equipment"

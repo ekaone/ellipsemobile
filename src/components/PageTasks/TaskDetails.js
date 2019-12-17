@@ -25,7 +25,6 @@ import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
 
-
 // components unit
 import HeaderAppBarDetails from './HeaderAppBarDetails'
 import { 
@@ -33,6 +32,7 @@ import {
   FailureMode,
   FailureCondition 
 } from './Data'
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -264,7 +264,7 @@ function TaskDetails() {
             Save
           </Button>
       </Paper>
-        <Fab className={classes.fab} style={{ backgroundColor: 'black' }} aria-label="add">
+        <Fab className={classes.fab} style={{ backgroundColor: Color.icon }} aria-label="add">
           <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
           <label htmlFor="icon-button-file">
             <IconButton style={{ color: "white" }} aria-label="upload picture" component="span">

@@ -1,1 +1,1 @@
-export const Color = { id: 1, buttonSave: 'primary', appBar: 'grey', icon: 'primary' }
+export const Color = { id: 1, buttonSave: 'primary', appBar: 'grey', icon: 'black' }

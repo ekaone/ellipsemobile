@@ -16,6 +16,7 @@ import NotificationImportantIcon from '@material-ui/icons/NotificationImportant'
 import View from './View'
 import NotificationMenuList from './NotificationMenuList'
 import { Items } from './Data'
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -60,7 +61,7 @@ function PageLanding() {
           </Grid>
           <Grid item xs={1}>
             <Badge onClick={handleClickMenu} className={classes.margin} badgeContent={4} color="secondary">
-              <NotificationImportantIcon style={{ color: 'black', fontSize: '30px' }} />
+              <NotificationImportantIcon style={{ color: Color.icon, fontSize: '30px' }} />
             </Badge>
             <NotificationMenuList 
               anchorEl={anchorEl}

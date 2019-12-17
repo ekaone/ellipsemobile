@@ -12,7 +12,7 @@ import Fab from '@material-ui/core/Fab';
 // components
 import HeaderAppBar from './HeaderAppBar'
 import { ApprovalItems } from './Data'
-
+import { Color } from '../Colors/Colors'
 
 const useStyles = makeStyles(theme => ({
   paper: {
