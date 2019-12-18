@@ -76,7 +76,7 @@ export default function PageLogin() {
               <span style={{ color: '#C00000', fontSize: '50px', fontWeight: 'bold' }}>EMS</span>            
               <span style={{ color: '#757170', fontSize: '30px' }}>mobile</span>
             </div>
-            <div style={{ textAlign: 'center', color: '#757170', fontSize: '18px' }}>
+            <div style={{ textAlign: 'center', color: '#757170', fontSize: '20px' }}>
               Enterprise Mobile Solution
             </div>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
