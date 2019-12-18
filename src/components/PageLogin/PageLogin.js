@@ -39,7 +39,6 @@ export default function PageLogin() {
   })
 
   const [open, setOpen] = useState(false);
-  // const [device, setDevice] = useState(deviceDetect)
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
