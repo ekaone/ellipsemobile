@@ -1,28 +1,16 @@
 import React, { useState } from 'react';
 import { 
-  Link,
   useHistory  
 } from 'react-router-dom'
-import { isMobile } from 'react-device-detect';
 
 // @material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 // components unit
 import Notification from './Notification'
-import UserList from './Users'
-
-// const deviceDetect = () => {
-//   if(isMobile) {
-//     return "Mobile"
-//   } else {
-//     return "Other"
-//   }
-// }
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,15 +55,12 @@ export default function PageLogin() {
 
   const handleClick = () => {
     if(values.username == 'a' && values.password == 'a') {
-      // history.push("/page-forgotpassword/" + JSON.stringify(values))
       history.push("/page-landing")
     } else {
       setOpen(true)
       return
     }
   }
-
-  console.log(values)
 
   return (
     <>
@@ -92,7 +77,7 @@ export default function PageLogin() {
               <span style={{ color: '#C00000', fontSize: '50px', fontWeight: 'bold' }}>EMS</span>            
               <span style={{ color: '#757170', fontSize: '30px' }}>mobile</span>
             </div>
-            <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px' }}>
+            <div style={{ textAlign: 'center', color: '#757170', fontSize: '18px' }}>
               Enterprise Mobile Solution
             </div>
             <form style={{ textAlign: 'center', paddingTop: '80px' }} className={classes.formLogin} noValidate autoComplete="off">
@@ -114,6 +99,7 @@ export default function PageLogin() {
               />
               <br />
               <Button 
+                style={{ boxShadow: '3px 3px 2px 2px #787672' }}
                 variant="contained" 
                 component="div"
                 onClick={handleClick}
@@ -121,20 +107,12 @@ export default function PageLogin() {
                 Login
               </Button>
             </form>
-              <Typography align="center" variant="subtitle1" component="div">
-                <Link 
-                  style={{ textDecoration: 'none' }} 
-                  // to="/page-forgotpassword/12"
-                  to={{
-                    pathname: "/page-forgotpassword",
-                    state: {
-                        data: { id: 1, source: 'Page Login', component: 'PageLogin', time: new Date() }
-                    }
-                }}
-                >
-                  {/* Forgot password */}
-                </Link>
-              </Typography>
+              <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px', paddingTop: '120px' }}>
+                Build solution for business
+              </div>
+              <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px' }}>
+                in the long-run
+              </div>
           </Grid>
         </Grid>
       </div>
