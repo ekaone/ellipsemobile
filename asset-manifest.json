@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ellipsemobile/static/js/main.6f74e8e5.chunk.js",
-    "main.js.map": "/ellipsemobile/static/js/main.6f74e8e5.chunk.js.map",
+    "main.js": "/ellipsemobile/static/js/main.56d80a9f.chunk.js",
+    "main.js.map": "/ellipsemobile/static/js/main.56d80a9f.chunk.js.map",
     "runtime-main.js": "/ellipsemobile/static/js/runtime-main.f95deca9.js",
     "runtime-main.js.map": "/ellipsemobile/static/js/runtime-main.f95deca9.js.map",
     "static/js/2.09f4ab7f.chunk.js": "/ellipsemobile/static/js/2.09f4ab7f.chunk.js",
     "static/js/2.09f4ab7f.chunk.js.map": "/ellipsemobile/static/js/2.09f4ab7f.chunk.js.map",
     "index.html": "/ellipsemobile/index.html",
-    "precache-manifest.bfa352c7792354d17af4d3324829935c.js": "/ellipsemobile/precache-manifest.bfa352c7792354d17af4d3324829935c.js",
+    "precache-manifest.a45f45fbca1d2ad13dc3cd4f336f21da.js": "/ellipsemobile/precache-manifest.a45f45fbca1d2ad13dc3cd4f336f21da.js",
     "service-worker.js": "/ellipsemobile/service-worker.js",
     "static/media/johnDow.jpg": "/ellipsemobile/static/media/johnDow.7ac7c797.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f95deca9.js",
     "static/js/2.09f4ab7f.chunk.js",
-    "static/js/main.6f74e8e5.chunk.js"
+    "static/js/main.56d80a9f.chunk.js"
   ]
 }
