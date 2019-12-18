@@ -106,10 +106,10 @@ export default function PageLogin() {
                 Login
               </Button>
             </form>
-              <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px', paddingTop: '120px' }}>
+              <div style={{ textAlign: 'center', color: '#757170', fontSize: '19px', paddingTop: '120px' }}>
                 Build solution for business
               </div>
-              <div style={{ textAlign: 'center', color: '#757170', fontSize: '25px' }}>
+              <div style={{ textAlign: 'center', color: '#757170', fontSize: '19px' }}>
                 in the long-run
               </div>
           </Grid>
